@@ -2,7 +2,7 @@
 
 import { type Client, type Options as Options2, type TDataShape, urlSearchParamsBodySerializer } from './client';
 import { client } from './client.gen';
-import type { itemsCreateItemData, itemsCreateItemErrors, itemsCreateItemResponses, itemsDeleteItemData, itemsDeleteItemErrors, itemsDeleteItemResponses, itemsReadItemData, itemsReadItemErrors, itemsReadItemResponses, itemsReadItemsData, itemsReadItemsErrors, itemsReadItemsResponses, itemsUpdateItemData, itemsUpdateItemErrors, itemsUpdateItemResponses, loginLoginAccessTokenData, loginLoginAccessTokenErrors, loginLoginAccessTokenResponses, loginRecoverPasswordData, loginRecoverPasswordErrors, loginRecoverPasswordHtmlContentData, loginRecoverPasswordHtmlContentErrors, loginRecoverPasswordHtmlContentResponses, loginRecoverPasswordResponses, loginResetPasswordData, loginResetPasswordErrors, loginResetPasswordResponses, loginTestTokenData, loginTestTokenResponses, privateCreateUserData, privateCreateUserErrors, privateCreateUserResponses, usersCreateUserData, usersCreateUserErrors, usersCreateUserResponses, usersDeleteUserData, usersDeleteUserErrors, usersDeleteUserMeData, usersDeleteUserMeResponses, usersDeleteUserResponses, usersReadUserByIdData, usersReadUserByIdErrors, usersReadUserByIdResponses, usersReadUserMeData, usersReadUserMeResponses, usersReadUsersData, usersReadUsersErrors, usersReadUsersResponses, usersRegisterUserData, usersRegisterUserErrors, usersRegisterUserResponses, usersUpdatePasswordMeData, usersUpdatePasswordMeErrors, usersUpdatePasswordMeResponses, usersUpdateUserData, usersUpdateUserErrors, usersUpdateUserMeData, usersUpdateUserMeErrors, usersUpdateUserMeResponses, usersUpdateUserResponses, utilsHealthCheckData, utilsHealthCheckResponses, utilsTestEmailData, utilsTestEmailErrors, utilsTestEmailResponses } from './types.gen';
+import type { backtestCalculateRatiosData, backtestCalculateRatiosErrors, backtestCalculateRatiosResponses, backtestReadBacktestResultData, backtestReadBacktestResultErrors, backtestReadBacktestResultResponses, backtestReadBacktestSummaryData, backtestReadBacktestSummaryErrors, backtestReadBacktestSummaryResponses, backtestReadExportPreviewData, backtestReadExportPreviewErrors, backtestReadExportPreviewResponses, backtestSaveRatiosData, backtestSaveRatiosErrors, backtestSaveRatiosResponses, configsReadConfigData, configsReadConfigErrors, configsReadConfigResponses, configsReadConfigsData, configsReadConfigsErrors, configsReadConfigsResponses, configsUpdateConfigData, configsUpdateConfigErrors, configsUpdateConfigResponses, configsValidateConfigsData, configsValidateConfigsResponses, exportsExportGlobalPreviewData, exportsExportGlobalPreviewErrors, exportsExportGlobalPreviewResponses, exportsExportModelSummaryData, exportsExportModelSummaryErrors, exportsExportModelSummaryResponses, exportsExportTaskData, exportsExportTaskErrors, exportsExportTaskResponses, exportsExportTasksBatchData, exportsExportTasksBatchErrors, exportsExportTasksBatchResponses, exportsExportWordReportData, exportsExportWordReportErrors, exportsExportWordReportResponses, globalPreviewReadGlobalPreviewData, globalPreviewReadGlobalPreviewErrors, globalPreviewReadGlobalPreviewResponses, globalPreviewReadPreviewGroupData, globalPreviewReadPreviewGroupErrors, globalPreviewReadPreviewGroupResponses, googleSheetsCreateGoogleSheetData, googleSheetsCreateGoogleSheetErrors, googleSheetsCreateGoogleSheetResponses, googleSheetsDeleteGoogleSheetData, googleSheetsDeleteGoogleSheetErrors, googleSheetsDeleteGoogleSheetResponses, googleSheetsReadGoogleSheetData, googleSheetsReadGoogleSheetErrors, googleSheetsReadGoogleSheetResponses, googleSheetsReadGoogleSheetsData, googleSheetsReadGoogleSheetsErrors, googleSheetsReadGoogleSheetsResponses, googleSheetsUpdateGoogleSheetData, googleSheetsUpdateGoogleSheetErrors, googleSheetsUpdateGoogleSheetResponses, googleSheetTokensCreateGoogleSheetTokenData, googleSheetTokensCreateGoogleSheetTokenErrors, googleSheetTokensCreateGoogleSheetTokenResponses, googleSheetTokensDeleteGoogleSheetTokenData, googleSheetTokensDeleteGoogleSheetTokenErrors, googleSheetTokensDeleteGoogleSheetTokenResponses, googleSheetTokensImportGoogleSheetTokensData, googleSheetTokensImportGoogleSheetTokensErrors, googleSheetTokensImportGoogleSheetTokensResponses, googleSheetTokensReadGoogleSheetTokenData, googleSheetTokensReadGoogleSheetTokenErrors, googleSheetTokensReadGoogleSheetTokenResponses, googleSheetTokensReadGoogleSheetTokensData, googleSheetTokensReadGoogleSheetTokensErrors, googleSheetTokensReadGoogleSheetTokensResponses, googleSheetTokensReconcileGoogleSheetTokensData, googleSheetTokensReconcileGoogleSheetTokensResponses, googleSheetTokensUpdateGoogleSheetTokenData, googleSheetTokensUpdateGoogleSheetTokenErrors, googleSheetTokensUpdateGoogleSheetTokenResponses, itemsCreateItemData, itemsCreateItemErrors, itemsCreateItemResponses, itemsDeleteItemData, itemsDeleteItemErrors, itemsDeleteItemResponses, itemsReadItemData, itemsReadItemErrors, itemsReadItemResponses, itemsReadItemsData, itemsReadItemsErrors, itemsReadItemsResponses, itemsUpdateItemData, itemsUpdateItemErrors, itemsUpdateItemResponses, loginLoginAccessTokenData, loginLoginAccessTokenErrors, loginLoginAccessTokenResponses, loginRecoverPasswordData, loginRecoverPasswordErrors, loginRecoverPasswordHtmlContentData, loginRecoverPasswordHtmlContentErrors, loginRecoverPasswordHtmlContentResponses, loginRecoverPasswordResponses, loginResetPasswordData, loginResetPasswordErrors, loginResetPasswordResponses, loginTestTokenData, loginTestTokenResponses, logsReadLatestLogsData, logsReadLatestLogsErrors, logsReadLatestLogsResponses, logsReadLogsData, logsReadLogsErrors, logsReadLogsResponses, metaReadEnumsData, metaReadEnumsResponses, metaReadVersionsData, metaReadVersionsResponses, modelSummaryReadModelSummaryData, modelSummaryReadModelSummaryErrors, modelSummaryReadModelSummaryResponses, modelSummaryRebuildModelSummaryData, modelSummaryRebuildModelSummaryErrors, modelSummaryRebuildModelSummaryResponses, modelSummaryRebuildStatusData, modelSummaryRebuildStatusResponses, modelSummarySummaryColumnsData, modelSummarySummaryColumnsResponses, navigationCreateNavigationItemData, navigationCreateNavigationItemErrors, navigationCreateNavigationItemResponses, navigationDeleteNavigationItemData, navigationDeleteNavigationItemErrors, navigationDeleteNavigationItemResponses, navigationReadNavigationItemsData, navigationReadNavigationItemsErrors, navigationReadNavigationItemsResponses, navigationUpdateNavigationItemData, navigationUpdateNavigationItemErrors, navigationUpdateNavigationItemResponses, performanceAnalysisAnalyzeData, performanceAnalysisAnalyzeErrors, performanceAnalysisAnalyzeResponses, performanceAnalysisAnalyzeStreamData, performanceAnalysisAnalyzeStreamErrors, performanceAnalysisAnalyzeStreamResponses, performanceAnalysisWeightCombinationData, performanceAnalysisWeightCombinationErrors, performanceAnalysisWeightCombinationResponses, privateCreateUserData, privateCreateUserErrors, privateCreateUserResponses, scheduledTasksCreateScheduledTaskData, scheduledTasksCreateScheduledTaskErrors, scheduledTasksCreateScheduledTaskResponses, scheduledTasksDeleteScheduledTaskData, scheduledTasksDeleteScheduledTaskErrors, scheduledTasksDeleteScheduledTaskResponses, scheduledTasksReadScheduledTaskData, scheduledTasksReadScheduledTaskErrors, scheduledTasksReadScheduledTaskResponses, scheduledTasksReadScheduledTasksData, scheduledTasksReadScheduledTasksErrors, scheduledTasksReadScheduledTasksResponses, scheduledTasksReadSchedulerStatsData, scheduledTasksReadSchedulerStatsResponses, scheduledTasksRunScheduledTaskData, scheduledTasksRunScheduledTaskErrors, scheduledTasksRunScheduledTaskResponses, scheduledTasksToggleScheduledTaskData, scheduledTasksToggleScheduledTaskErrors, scheduledTasksToggleScheduledTaskResponses, scheduledTasksUpdateScheduledTaskData, scheduledTasksUpdateScheduledTaskErrors, scheduledTasksUpdateScheduledTaskResponses, stocksReadStockData, stocksReadStockErrors, stocksReadStockResponses, stocksSearchStocksData, stocksSearchStocksErrors, stocksSearchStocksResponses, taskResultsDeleteTaskResultData, taskResultsDeleteTaskResultErrors, taskResultsDeleteTaskResultResponses, taskResultsReadReturnSeriesData, taskResultsReadReturnSeriesErrors, taskResultsReadReturnSeriesResponses, taskResultsReadTaskResultData, taskResultsReadTaskResultErrors, taskResultsReadTaskResultResponses, taskResultsReadTaskResultsData, taskResultsReadTaskResultsErrors, taskResultsReadTaskResultsResponses, tasksBatchCreateTasksData, tasksBatchCreateTasksErrors, tasksBatchCreateTasksResponses, tasksCancelTaskData, tasksCancelTaskErrors, tasksCancelTaskResponses, tasksCreateRestartData, tasksCreateRestartErrors, tasksCreateRestartResponses, tasksCreateTaskData, tasksCreateTaskErrors, tasksCreateTaskResponses, tasksDeleteTaskData, tasksDeleteTaskErrors, tasksDeleteTaskResponses, tasksReadTaskData, tasksReadTaskErrors, tasksReadTaskLogsData, tasksReadTaskLogsErrors, tasksReadTaskLogsResponses, tasksReadTaskResponses, tasksReadTasksData, tasksReadTasksErrors, tasksReadTasksResponses, tasksReadTaskStatusCheckData, tasksReadTaskStatusCheckErrors, tasksReadTaskStatusCheckResponses, tasksUpdateTaskConfigData, tasksUpdateTaskConfigErrors, tasksUpdateTaskConfigResponses, taskTemplatesCreateTaskTemplateData, taskTemplatesCreateTaskTemplateErrors, taskTemplatesCreateTaskTemplateResponses, taskTemplatesDeleteTaskTemplateData, taskTemplatesDeleteTaskTemplateErrors, taskTemplatesDeleteTaskTemplateResponses, taskTemplatesReadTaskTemplateData, taskTemplatesReadTaskTemplateErrors, taskTemplatesReadTaskTemplateResponses, taskTemplatesReadTaskTemplatesData, taskTemplatesReadTaskTemplatesErrors, taskTemplatesReadTaskTemplatesResponses, taskTemplatesUpdateTaskTemplateData, taskTemplatesUpdateTaskTemplateErrors, taskTemplatesUpdateTaskTemplateResponses, usersCreateUserData, usersCreateUserErrors, usersCreateUserResponses, usersDeleteUserData, usersDeleteUserErrors, usersDeleteUserMeData, usersDeleteUserMeResponses, usersDeleteUserResponses, usersReadUserByIdData, usersReadUserByIdErrors, usersReadUserByIdResponses, usersReadUserMeData, usersReadUserMeResponses, usersReadUsersData, usersReadUsersErrors, usersReadUsersResponses, usersRegisterUserData, usersRegisterUserErrors, usersRegisterUserResponses, usersUpdatePasswordMeData, usersUpdatePasswordMeErrors, usersUpdatePasswordMeResponses, usersUpdateUserData, usersUpdateUserErrors, usersUpdateUserMeData, usersUpdateUserMeErrors, usersUpdateUserMeResponses, usersUpdateUserResponses, utilsHealthCheckData, utilsHealthCheckResponses, utilsTestEmailData, utilsTestEmailErrors, utilsTestEmailResponses } from './types.gen';
 
 export type Options<TData extends TDataShape = TDataShape, ThrowOnError extends boolean = boolean, TResponse = unknown> = Options2<TData, ThrowOnError, TResponse> & {
     /**
@@ -360,6 +360,1071 @@ export class ItemsService {
                 'Content-Type': 'application/json',
                 ...options.headers
             }
+        });
+    }
+}
+
+export class TasksService {
+    /**
+     * Read Tasks
+     *
+     * Retrieve tasks with optional filters and statistics.
+     */
+    public static readTasks<ThrowOnError extends boolean = true>(options?: Options<tasksReadTasksData, ThrowOnError>) {
+        return (options?.client ?? client).get<tasksReadTasksResponses, tasksReadTasksErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/',
+            ...options
+        });
+    }
+    
+    /**
+     * Create Task
+     *
+     * Create a new pending task; the worker claims it when slots free up.
+     */
+    public static createTask<ThrowOnError extends boolean = true>(options: Options<tasksCreateTaskData, ThrowOnError>) {
+        return (options.client ?? client).post<tasksCreateTaskResponses, tasksCreateTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Batch Create Tasks
+     *
+     * Expand a C31 batch request into pending C3 tasks.
+     */
+    public static batchCreateTasks<ThrowOnError extends boolean = true>(options: Options<tasksBatchCreateTasksData, ThrowOnError>) {
+        return (options.client ?? client).post<tasksBatchCreateTasksResponses, tasksBatchCreateTasksErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/batch-create',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete Task
+     *
+     * Delete a task; results/series/logs cascade.
+     */
+    public static deleteTask<ThrowOnError extends boolean = true>(options: Options<tasksDeleteTaskData, ThrowOnError>) {
+        return (options.client ?? client).delete<tasksDeleteTaskResponses, tasksDeleteTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Task
+     *
+     * Get task by ID (includes full config).
+     */
+    public static readTask<ThrowOnError extends boolean = true>(options: Options<tasksReadTaskData, ThrowOnError>) {
+        return (options.client ?? client).get<tasksReadTaskResponses, tasksReadTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update Task Config
+     *
+     * Update a pending task's name/description/config.
+     */
+    public static updateTaskConfig<ThrowOnError extends boolean = true>(options: Options<tasksUpdateTaskConfigData, ThrowOnError>) {
+        return (options.client ?? client).put<tasksUpdateTaskConfigResponses, tasksUpdateTaskConfigErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/{id}/config',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Cancel Task
+     *
+     * Request cancellation: sets stop_requested; the worker bridges it.
+     */
+    public static cancelTask<ThrowOnError extends boolean = true>(options: Options<tasksCancelTaskData, ThrowOnError>) {
+        return (options.client ?? client).post<tasksCancelTaskResponses, tasksCancelTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/{id}/cancel',
+            ...options
+        });
+    }
+    
+    /**
+     * Create Restart
+     *
+     * Copy a task into a fresh pending row (config reused, old row untouched).
+     */
+    public static createRestart<ThrowOnError extends boolean = true>(options: Options<tasksCreateRestartData, ThrowOnError>) {
+        return (options.client ?? client).post<tasksCreateRestartResponses, tasksCreateRestartErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/{id}/create-restart',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Task Logs
+     *
+     * Retrieve task logs (newest first).
+     */
+    public static readTaskLogs<ThrowOnError extends boolean = true>(options: Options<tasksReadTaskLogsData, ThrowOnError>) {
+        return (options.client ?? client).get<tasksReadTaskLogsResponses, tasksReadTaskLogsErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/{id}/logs',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Task Status Check
+     *
+     * Lightweight polling payload: status, progress, heartbeat, latest log.
+     */
+    public static readTaskStatusCheck<ThrowOnError extends boolean = true>(options: Options<tasksReadTaskStatusCheckData, ThrowOnError>) {
+        return (options.client ?? client).get<tasksReadTaskStatusCheckResponses, tasksReadTaskStatusCheckErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/tasks/{id}/status-check',
+            ...options
+        });
+    }
+}
+
+export class TaskResultsService {
+    /**
+     * Read Task Results
+     *
+     * List a task's results (lightweight projection, no heavy params/result JSON).
+     */
+    public static resultsReadTaskResults<ThrowOnError extends boolean = true>(options: Options<taskResultsReadTaskResultsData, ThrowOnError>) {
+        return (options.client ?? client).get<taskResultsReadTaskResultsResponses, taskResultsReadTaskResultsErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/task-results/tasks/{task_id}/results',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete Task Result
+     *
+     * Delete a result; its return-series rows cascade.
+     */
+    public static resultsDeleteTaskResult<ThrowOnError extends boolean = true>(options: Options<taskResultsDeleteTaskResultData, ThrowOnError>) {
+        return (options.client ?? client).delete<taskResultsDeleteTaskResultResponses, taskResultsDeleteTaskResultErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/task-results/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Task Result
+     *
+     * Get one result including the full params/result JSON payloads.
+     */
+    public static resultsReadTaskResult<ThrowOnError extends boolean = true>(options: Options<taskResultsReadTaskResultData, ThrowOnError>) {
+        return (options.client ?? client).get<taskResultsReadTaskResultResponses, taskResultsReadTaskResultErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/task-results/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Return Series
+     *
+     * Return-series rows for a result, ordered by date (PK prefix range scan).
+     */
+    public static resultsReadReturnSeries<ThrowOnError extends boolean = true>(options: Options<taskResultsReadReturnSeriesData, ThrowOnError>) {
+        return (options.client ?? client).get<taskResultsReadReturnSeriesResponses, taskResultsReadReturnSeriesErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/task-results/{id}/return-series',
+            ...options
+        });
+    }
+}
+
+export class GlobalPreviewService {
+    /**
+     * Read Global Preview
+     *
+     * Initial global-preview payload built from hot columns (no full scans).
+     */
+    public static previewReadGlobalPreview<ThrowOnError extends boolean = true>(options: Options<globalPreviewReadGlobalPreviewData, ThrowOnError>) {
+        return (options.client ?? client).get<globalPreviewReadGlobalPreviewResponses, globalPreviewReadGlobalPreviewErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/global-preview/tasks/{task_id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Preview Group
+     *
+     * Filtered/grouped preview payload.
+     */
+    public static previewReadPreviewGroup<ThrowOnError extends boolean = true>(options: Options<globalPreviewReadPreviewGroupData, ThrowOnError>) {
+        return (options.client ?? client).post<globalPreviewReadPreviewGroupResponses, globalPreviewReadPreviewGroupErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/global-preview/tasks/{task_id}/preview-group',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class BacktestService {
+    /**
+     * Read Backtest Result
+     *
+     * Backtest result detail (full params/result payloads).
+     */
+    public static readBacktestResult<ThrowOnError extends boolean = true>(options: Options<backtestReadBacktestResultData, ThrowOnError>) {
+        return (options.client ?? client).get<backtestReadBacktestResultResponses, backtestReadBacktestResultErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/backtest/task-results/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Backtest Summary
+     *
+     * Task-level summary from hot columns (no full-table scans).
+     */
+    public static readBacktestSummary<ThrowOnError extends boolean = true>(options: Options<backtestReadBacktestSummaryData, ThrowOnError>) {
+        return (options.client ?? client).get<backtestReadBacktestSummaryResponses, backtestReadBacktestSummaryErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/backtest/task-summary/{task_id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Calculate Ratios
+     *
+     * Ratio calculation over provided metric values (percent-safe).
+     */
+    public static calculateRatios<ThrowOnError extends boolean = true>(options: Options<backtestCalculateRatiosData, ThrowOnError>) {
+        return (options.client ?? client).post<backtestCalculateRatiosResponses, backtestCalculateRatiosErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/backtest/calculate-ratios',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Save Ratios
+     *
+     * Persist per-task ratio edits (system_config keyed storage).
+     */
+    public static saveRatios<ThrowOnError extends boolean = true>(options: Options<backtestSaveRatiosData, ThrowOnError>) {
+        return (options.client ?? client).put<backtestSaveRatiosResponses, backtestSaveRatiosErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/backtest/ratios',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Read Export Preview
+     *
+     * Export preview payload (Excel workbook rendering lands in P6).
+     */
+    public static readExportPreview<ThrowOnError extends boolean = true>(options: Options<backtestReadExportPreviewData, ThrowOnError>) {
+        return (options.client ?? client).get<backtestReadExportPreviewResponses, backtestReadExportPreviewErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/backtest/task-results/{id}/export-preview',
+            ...options
+        });
+    }
+}
+
+export class ModelSummaryService {
+    /**
+     * Read Model Summary
+     *
+     * Query best results through the task_result hot columns (is_best).
+     */
+    public static summaryReadModelSummary<ThrowOnError extends boolean = true>(options?: Options<modelSummaryReadModelSummaryData, ThrowOnError>) {
+        return (options?.client ?? client).get<modelSummaryReadModelSummaryResponses, modelSummaryReadModelSummaryErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/model-summary/',
+            ...options
+        });
+    }
+    
+    /**
+     * Rebuild Model Summary
+     *
+     * Recompute hot columns for finished tasks (backfill repair tool).
+     */
+    public static summaryRebuildModelSummary<ThrowOnError extends boolean = true>(options: Options<modelSummaryRebuildModelSummaryData, ThrowOnError>) {
+        return (options.client ?? client).post<modelSummaryRebuildModelSummaryResponses, modelSummaryRebuildModelSummaryErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/model-summary/rebuild',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Rebuild Status
+     *
+     * Last rebuild job status.
+     */
+    public static summaryRebuildStatus<ThrowOnError extends boolean = true>(options?: Options<modelSummaryRebuildStatusData, ThrowOnError>) {
+        return (options?.client ?? client).get<modelSummaryRebuildStatusResponses, unknown, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/model-summary/rebuild/status',
+            ...options
+        });
+    }
+    
+    /**
+     * Summary Columns
+     *
+     * Shared column vocabulary for summary tables (single source of truth).
+     */
+    public static summarySummaryColumns<ThrowOnError extends boolean = true>(options?: Options<modelSummarySummaryColumnsData, ThrowOnError>) {
+        return (options?.client ?? client).get<modelSummarySummaryColumnsResponses, unknown, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/model-summary/columns',
+            ...options
+        });
+    }
+}
+
+export class ExportsService {
+    /**
+     * Export Task
+     *
+     * Stream one task's results as CSV.
+     */
+    public static exportTask<ThrowOnError extends boolean = true>(options: Options<exportsExportTaskData, ThrowOnError>) {
+        return (options.client ?? client).get<exportsExportTaskResponses, exportsExportTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/exports/tasks/{task_id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Export Tasks Batch
+     *
+     * Pack up to 10 tasks' result CSVs into one ZIP download.
+     */
+    public static exportTasksBatch<ThrowOnError extends boolean = true>(options: Options<exportsExportTasksBatchData, ThrowOnError>) {
+        return (options.client ?? client).post<exportsExportTasksBatchResponses, exportsExportTasksBatchErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/exports/tasks/batch',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Export Model Summary
+     *
+     * Export the summary grid (hot columns) as CSV.
+     */
+    public static exportModelSummary<ThrowOnError extends boolean = true>(options?: Options<exportsExportModelSummaryData, ThrowOnError>) {
+        return (options?.client ?? client).get<exportsExportModelSummaryResponses, exportsExportModelSummaryErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/exports/model-summary',
+            ...options
+        });
+    }
+    
+    /**
+     * Export Global Preview
+     *
+     * Global preview export (Excel workbook lands with the P6 joint debugging).
+     */
+    public static exportGlobalPreview<ThrowOnError extends boolean = true>(options: Options<exportsExportGlobalPreviewData, ThrowOnError>) {
+        return (options.client ?? client).get<exportsExportGlobalPreviewResponses, exportsExportGlobalPreviewErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/exports/global-previews/{task_id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Export Word Report
+     *
+     * Word report export (python-docx pipeline lands with the P6 joint debugging).
+     */
+    public static exportWordReport<ThrowOnError extends boolean = true>(options: Options<exportsExportWordReportData, ThrowOnError>) {
+        return (options.client ?? client).post<exportsExportWordReportResponses, exportsExportWordReportErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/exports/backtest-reports/word',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class PerformanceAnalysisService {
+    /**
+     * Analyze
+     *
+     * Synchronous return analysis.
+     */
+    public static analysisAnalyze<ThrowOnError extends boolean = true>(options: Options<performanceAnalysisAnalyzeData, ThrowOnError>) {
+        return (options.client ?? client).post<performanceAnalysisAnalyzeResponses, performanceAnalysisAnalyzeErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/performance-analysis/analyze',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Analyze Stream
+     *
+     * NDJSON streaming analysis (one json.dumps line +
+     * per row).
+     */
+    public static analysisAnalyzeStream<ThrowOnError extends boolean = true>(options: Options<performanceAnalysisAnalyzeStreamData, ThrowOnError>) {
+        return (options.client ?? client).post<performanceAnalysisAnalyzeStreamResponses, performanceAnalysisAnalyzeStreamErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/performance-analysis/v1/analyze',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Weight Combination
+     *
+     * Chunked-streaming weight combination (up to 100k rows).
+     */
+    public static analysisWeightCombination<ThrowOnError extends boolean = true>(options: Options<performanceAnalysisWeightCombinationData, ThrowOnError>) {
+        return (options.client ?? client).post<performanceAnalysisWeightCombinationResponses, performanceAnalysisWeightCombinationErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/performance-analysis/v1/weight-combination',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class GoogleSheetsService {
+    /**
+     * Read Google Sheets
+     *
+     * List registered Google Sheets with occupancy state.
+     */
+    public static sheetsReadGoogleSheets<ThrowOnError extends boolean = true>(options?: Options<googleSheetsReadGoogleSheetsData, ThrowOnError>) {
+        return (options?.client ?? client).get<googleSheetsReadGoogleSheetsResponses, googleSheetsReadGoogleSheetsErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheets/',
+            ...options
+        });
+    }
+    
+    /**
+     * Create Google Sheet
+     *
+     * Register a Google Sheet.
+     */
+    public static sheetsCreateGoogleSheet<ThrowOnError extends boolean = true>(options: Options<googleSheetsCreateGoogleSheetData, ThrowOnError>) {
+        return (options.client ?? client).post<googleSheetsCreateGoogleSheetResponses, googleSheetsCreateGoogleSheetErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheets/',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete Google Sheet
+     *
+     * Delete a registered sheet (blocked while occupied).
+     */
+    public static sheetsDeleteGoogleSheet<ThrowOnError extends boolean = true>(options: Options<googleSheetsDeleteGoogleSheetData, ThrowOnError>) {
+        return (options.client ?? client).delete<googleSheetsDeleteGoogleSheetResponses, googleSheetsDeleteGoogleSheetErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheets/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Google Sheet
+     *
+     * Get a registered sheet.
+     */
+    public static sheetsReadGoogleSheet<ThrowOnError extends boolean = true>(options: Options<googleSheetsReadGoogleSheetData, ThrowOnError>) {
+        return (options.client ?? client).get<googleSheetsReadGoogleSheetResponses, googleSheetsReadGoogleSheetErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheets/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update Google Sheet
+     *
+     * Update a registered sheet.
+     */
+    public static sheetsUpdateGoogleSheet<ThrowOnError extends boolean = true>(options: Options<googleSheetsUpdateGoogleSheetData, ThrowOnError>) {
+        return (options.client ?? client).put<googleSheetsUpdateGoogleSheetResponses, googleSheetsUpdateGoogleSheetErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheets/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class GoogleSheetTokensService {
+    /**
+     * Read Google Sheet Tokens
+     *
+     * List the token pool with usage counters.
+     */
+    public static sheetTokensReadGoogleSheetTokens<ThrowOnError extends boolean = true>(options?: Options<googleSheetTokensReadGoogleSheetTokensData, ThrowOnError>) {
+        return (options?.client ?? client).get<googleSheetTokensReadGoogleSheetTokensResponses, googleSheetTokensReadGoogleSheetTokensErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheet-tokens/',
+            ...options
+        });
+    }
+    
+    /**
+     * Create Google Sheet Token
+     *
+     * Import one OAuth token into the pool.
+     */
+    public static sheetTokensCreateGoogleSheetToken<ThrowOnError extends boolean = true>(options: Options<googleSheetTokensCreateGoogleSheetTokenData, ThrowOnError>) {
+        return (options.client ?? client).post<googleSheetTokensCreateGoogleSheetTokenResponses, googleSheetTokensCreateGoogleSheetTokenErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheet-tokens/',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Import Google Sheet Tokens
+     *
+     * Batch-import tokens (deduplicated by context).
+     */
+    public static sheetTokensImportGoogleSheetTokens<ThrowOnError extends boolean = true>(options: Options<googleSheetTokensImportGoogleSheetTokensData, ThrowOnError>) {
+        return (options.client ?? client).post<googleSheetTokensImportGoogleSheetTokensResponses, googleSheetTokensImportGoogleSheetTokensErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheet-tokens/import',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Reconcile Google Sheet Tokens
+     *
+     * Reconcile current_in_use_count against running task configs.
+     */
+    public static sheetTokensReconcileGoogleSheetTokens<ThrowOnError extends boolean = true>(options?: Options<googleSheetTokensReconcileGoogleSheetTokensData, ThrowOnError>) {
+        return (options?.client ?? client).post<googleSheetTokensReconcileGoogleSheetTokensResponses, unknown, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheet-tokens/reconcile',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete Google Sheet Token
+     *
+     * Remove a token from the pool.
+     */
+    public static sheetTokensDeleteGoogleSheetToken<ThrowOnError extends boolean = true>(options: Options<googleSheetTokensDeleteGoogleSheetTokenData, ThrowOnError>) {
+        return (options.client ?? client).delete<googleSheetTokensDeleteGoogleSheetTokenResponses, googleSheetTokensDeleteGoogleSheetTokenErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheet-tokens/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Google Sheet Token
+     *
+     * Get one token (context included; mask before display in the UI).
+     */
+    public static sheetTokensReadGoogleSheetToken<ThrowOnError extends boolean = true>(options: Options<googleSheetTokensReadGoogleSheetTokenData, ThrowOnError>) {
+        return (options.client ?? client).get<googleSheetTokensReadGoogleSheetTokenResponses, googleSheetTokensReadGoogleSheetTokenErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheet-tokens/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update Google Sheet Token
+     *
+     * Update token name/quotas/active flag.
+     */
+    public static sheetTokensUpdateGoogleSheetToken<ThrowOnError extends boolean = true>(options: Options<googleSheetTokensUpdateGoogleSheetTokenData, ThrowOnError>) {
+        return (options.client ?? client).put<googleSheetTokensUpdateGoogleSheetTokenResponses, googleSheetTokensUpdateGoogleSheetTokenErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/google-sheet-tokens/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class ScheduledTasksService {
+    /**
+     * Read Scheduled Tasks
+     *
+     * List scheduled tasks with lock state and next fire time.
+     */
+    public static tasksReadScheduledTasks<ThrowOnError extends boolean = true>(options?: Options<scheduledTasksReadScheduledTasksData, ThrowOnError>) {
+        return (options?.client ?? client).get<scheduledTasksReadScheduledTasksResponses, scheduledTasksReadScheduledTasksErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/scheduled-tasks/',
+            ...options
+        });
+    }
+    
+    /**
+     * Create Scheduled Task
+     *
+     * Create a scheduled task; the cron expression is validated with croniter.
+     */
+    public static tasksCreateScheduledTask<ThrowOnError extends boolean = true>(options: Options<scheduledTasksCreateScheduledTaskData, ThrowOnError>) {
+        return (options.client ?? client).post<scheduledTasksCreateScheduledTaskResponses, scheduledTasksCreateScheduledTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/scheduled-tasks/',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Read Scheduler Stats
+     *
+     * Worker instance, running lock count and next fire times.
+     */
+    public static tasksReadSchedulerStats<ThrowOnError extends boolean = true>(options?: Options<scheduledTasksReadSchedulerStatsData, ThrowOnError>) {
+        return (options?.client ?? client).get<scheduledTasksReadSchedulerStatsResponses, unknown, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/scheduled-tasks/scheduler/stats',
+            ...options
+        });
+    }
+    
+    /**
+     * Delete Scheduled Task
+     *
+     * Delete a scheduled task (blocked while its lock is held).
+     */
+    public static tasksDeleteScheduledTask<ThrowOnError extends boolean = true>(options: Options<scheduledTasksDeleteScheduledTaskData, ThrowOnError>) {
+        return (options.client ?? client).delete<scheduledTasksDeleteScheduledTaskResponses, scheduledTasksDeleteScheduledTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/scheduled-tasks/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Scheduled Task
+     *
+     * Get one scheduled task.
+     */
+    public static tasksReadScheduledTask<ThrowOnError extends boolean = true>(options: Options<scheduledTasksReadScheduledTaskData, ThrowOnError>) {
+        return (options.client ?? client).get<scheduledTasksReadScheduledTaskResponses, scheduledTasksReadScheduledTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/scheduled-tasks/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update Scheduled Task
+     *
+     * Update a scheduled task (name/cron/params/enabled).
+     */
+    public static tasksUpdateScheduledTask<ThrowOnError extends boolean = true>(options: Options<scheduledTasksUpdateScheduledTaskData, ThrowOnError>) {
+        return (options.client ?? client).put<scheduledTasksUpdateScheduledTaskResponses, scheduledTasksUpdateScheduledTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/scheduled-tasks/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Toggle Scheduled Task
+     *
+     * Enable/disable a scheduled task.
+     */
+    public static tasksToggleScheduledTask<ThrowOnError extends boolean = true>(options: Options<scheduledTasksToggleScheduledTaskData, ThrowOnError>) {
+        return (options.client ?? client).post<scheduledTasksToggleScheduledTaskResponses, scheduledTasksToggleScheduledTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/scheduled-tasks/{id}/toggle',
+            ...options
+        });
+    }
+    
+    /**
+     * Run Scheduled Task
+     *
+     * Run now: clear last_run_at so the next scheduler tick claims it.
+     */
+    public static tasksRunScheduledTask<ThrowOnError extends boolean = true>(options: Options<scheduledTasksRunScheduledTaskData, ThrowOnError>) {
+        return (options.client ?? client).post<scheduledTasksRunScheduledTaskResponses, scheduledTasksRunScheduledTaskErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/scheduled-tasks/{id}/run',
+            ...options
+        });
+    }
+}
+
+export class TaskTemplatesService {
+    /**
+     * Read Task Templates
+     *
+     * List task templates.
+     */
+    public static templatesReadTaskTemplates<ThrowOnError extends boolean = true>(options?: Options<taskTemplatesReadTaskTemplatesData, ThrowOnError>) {
+        return (options?.client ?? client).get<taskTemplatesReadTaskTemplatesResponses, taskTemplatesReadTaskTemplatesErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/task-templates/',
+            ...options
+        });
+    }
+    
+    /**
+     * Create Task Template
+     *
+     * Create a task template.
+     */
+    public static templatesCreateTaskTemplate<ThrowOnError extends boolean = true>(options: Options<taskTemplatesCreateTaskTemplateData, ThrowOnError>) {
+        return (options.client ?? client).post<taskTemplatesCreateTaskTemplateResponses, taskTemplatesCreateTaskTemplateErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/task-templates/',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete Task Template
+     *
+     * Delete a task template.
+     */
+    public static templatesDeleteTaskTemplate<ThrowOnError extends boolean = true>(options: Options<taskTemplatesDeleteTaskTemplateData, ThrowOnError>) {
+        return (options.client ?? client).delete<taskTemplatesDeleteTaskTemplateResponses, taskTemplatesDeleteTaskTemplateErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/task-templates/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Task Template
+     *
+     * Get a task template.
+     */
+    public static templatesReadTaskTemplate<ThrowOnError extends boolean = true>(options: Options<taskTemplatesReadTaskTemplateData, ThrowOnError>) {
+        return (options.client ?? client).get<taskTemplatesReadTaskTemplateResponses, taskTemplatesReadTaskTemplateErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/task-templates/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update Task Template
+     *
+     * Update a task template.
+     */
+    public static templatesUpdateTaskTemplate<ThrowOnError extends boolean = true>(options: Options<taskTemplatesUpdateTaskTemplateData, ThrowOnError>) {
+        return (options.client ?? client).put<taskTemplatesUpdateTaskTemplateResponses, taskTemplatesUpdateTaskTemplateErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/task-templates/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class StocksService {
+    /**
+     * Search Stocks
+     *
+     * Search stock metadata by code or name.
+     */
+    public static searchStocks<ThrowOnError extends boolean = true>(options: Options<stocksSearchStocksData, ThrowOnError>) {
+        return (options.client ?? client).get<stocksSearchStocksResponses, stocksSearchStocksErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/stocks/search',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Stock
+     *
+     * Get stock metadata incl. the raw source payload.
+     */
+    public static readStock<ThrowOnError extends boolean = true>(options: Options<stocksReadStockData, ThrowOnError>) {
+        return (options.client ?? client).get<stocksReadStockResponses, stocksReadStockErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/stocks/{market_type}/{code}',
+            ...options
+        });
+    }
+}
+
+export class ConfigsService {
+    /**
+     * Read Configs
+     *
+     * List system config entries (sensitive values masked).
+     */
+    public static readConfigs<ThrowOnError extends boolean = true>(options?: Options<configsReadConfigsData, ThrowOnError>) {
+        return (options?.client ?? client).get<configsReadConfigsResponses, configsReadConfigsErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/configs/',
+            ...options
+        });
+    }
+    
+    /**
+     * Validate Configs
+     *
+     * Sanity-check known config keys (types parse, bounds hold).
+     */
+    public static validateConfigs<ThrowOnError extends boolean = true>(options?: Options<configsValidateConfigsData, ThrowOnError>) {
+        return (options?.client ?? client).get<configsValidateConfigsResponses, unknown, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/configs/validate',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Config
+     *
+     * Read one config value (sensitive values masked).
+     */
+    public static readConfig<ThrowOnError extends boolean = true>(options: Options<configsReadConfigData, ThrowOnError>) {
+        return (options.client ?? client).get<configsReadConfigResponses, configsReadConfigErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/configs/{key}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update Config
+     *
+     * Upsert one config value.
+     */
+    public static updateConfig<ThrowOnError extends boolean = true>(options: Options<configsUpdateConfigData, ThrowOnError>) {
+        return (options.client ?? client).put<configsUpdateConfigResponses, configsUpdateConfigErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/configs/{key}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class NavigationService {
+    /**
+     * Read Navigation Items
+     *
+     * List navigation menu items (optionally visible only).
+     */
+    public static readNavigationItems<ThrowOnError extends boolean = true>(options?: Options<navigationReadNavigationItemsData, ThrowOnError>) {
+        return (options?.client ?? client).get<navigationReadNavigationItemsResponses, navigationReadNavigationItemsErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/navigation-menu-items/',
+            ...options
+        });
+    }
+    
+    /**
+     * Create Navigation Item
+     *
+     * Create a navigation menu item.
+     */
+    public static createNavigationItem<ThrowOnError extends boolean = true>(options: Options<navigationCreateNavigationItemData, ThrowOnError>) {
+        return (options.client ?? client).post<navigationCreateNavigationItemResponses, navigationCreateNavigationItemErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/navigation-menu-items/',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+    
+    /**
+     * Delete Navigation Item
+     *
+     * Delete a navigation menu item.
+     */
+    public static deleteNavigationItem<ThrowOnError extends boolean = true>(options: Options<navigationDeleteNavigationItemData, ThrowOnError>) {
+        return (options.client ?? client).delete<navigationDeleteNavigationItemResponses, navigationDeleteNavigationItemErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/navigation-menu-items/{id}',
+            ...options
+        });
+    }
+    
+    /**
+     * Update Navigation Item
+     *
+     * Update a navigation menu item.
+     */
+    public static updateNavigationItem<ThrowOnError extends boolean = true>(options: Options<navigationUpdateNavigationItemData, ThrowOnError>) {
+        return (options.client ?? client).put<navigationUpdateNavigationItemResponses, navigationUpdateNavigationItemErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/navigation-menu-items/{id}',
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...options.headers
+            }
+        });
+    }
+}
+
+export class LogsService {
+    /**
+     * Read Logs
+     *
+     * Query task logs with level/task/time filters.
+     */
+    public static readLogs<ThrowOnError extends boolean = true>(options?: Options<logsReadLogsData, ThrowOnError>) {
+        return (options?.client ?? client).get<logsReadLogsResponses, logsReadLogsErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/logs/',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Latest Logs
+     *
+     * Most recent log rows across all tasks.
+     */
+    public static readLatestLogs<ThrowOnError extends boolean = true>(options?: Options<logsReadLatestLogsData, ThrowOnError>) {
+        return (options?.client ?? client).get<logsReadLatestLogsResponses, logsReadLatestLogsErrors, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/logs/latest',
+            ...options
+        });
+    }
+}
+
+export class MetaService {
+    /**
+     * Read Versions
+     *
+     * App/API version info.
+     */
+    public static readVersions<ThrowOnError extends boolean = true>(options?: Options<metaReadVersionsData, ThrowOnError>) {
+        return (options?.client ?? client).get<metaReadVersionsResponses, unknown, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/meta/versions',
+            ...options
+        });
+    }
+    
+    /**
+     * Read Enums
+     *
+     * Single source of truth for UI enums (task types, statuses, markets).
+     */
+    public static readEnums<ThrowOnError extends boolean = true>(options?: Options<metaReadEnumsData, ThrowOnError>) {
+        return (options?.client ?? client).get<metaReadEnumsResponses, unknown, ThrowOnError>({
+            responseType: 'json',
+            url: '/api/v1/meta/enums',
+            ...options
         });
     }
 }

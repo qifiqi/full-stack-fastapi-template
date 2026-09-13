@@ -3,16 +3,24 @@ from pathlib import Path
 import sentry_sdk
 from fastapi import FastAPI
 from fastapi.routing import APIRoute
+from sqlmodel import Session
 from starlette.middleware.cors import CORSMiddleware
 
 from app.api.main import api_router
 from app.core.config import settings
+from app.core.db import engine
+from app.services.config_manager import init_config_manager
 
 FRONTEND_DIR = Path(__file__).parent / "frontend"
 
 
 def custom_generate_unique_id(route: APIRoute) -> str:
     return f"{route.tags[0]}-{route.name}"
+
+
+# The API process reads SystemConfig-backed settings too (configs endpoints,
+# google sheet timeouts); the worker owns the same singleton in its process.
+init_config_manager(lambda: Session(engine))
 
 
 if settings.SENTRY_DSN and settings.FASTAPI_ENV != "development":

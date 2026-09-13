@@ -5,6 +5,20 @@ export type ClientOptions = {
 };
 
 /**
+ * BackfillRequest
+ */
+export type BackfillRequest = {
+    /**
+     * Task Ids
+     */
+    task_ids?: Array<number> | null;
+    /**
+     * All
+     */
+    all?: boolean;
+};
+
+/**
  * Body_login-login_access_token
  */
 export type Body_login_login_access_token = {
@@ -32,6 +46,212 @@ export type Body_login_login_access_token = {
      * Client Secret
      */
     client_secret?: string | null;
+};
+
+/**
+ * GoogleSheetCreate
+ */
+export type GoogleSheetCreate = {
+    /**
+     * Spreadsheet Id
+     */
+    spreadsheet_id: string;
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Registry Scope
+     */
+    registry_scope?: string;
+};
+
+/**
+ * GoogleSheetPublic
+ */
+export type GoogleSheetPublic = {
+    /**
+     * Spreadsheet Id
+     */
+    spreadsheet_id: string;
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Registry Scope
+     */
+    registry_scope?: string;
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Is In Use
+     */
+    is_in_use: boolean;
+    /**
+     * Current Task Id
+     */
+    current_task_id?: number | null;
+    /**
+     * Created At
+     */
+    created_at?: string | null;
+};
+
+/**
+ * GoogleSheetTokenCreate
+ */
+export type GoogleSheetTokenCreate = {
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Is Active
+     */
+    is_active?: boolean;
+    /**
+     * Current In Use Count
+     */
+    current_in_use_count?: number;
+    /**
+     * Total Usage Count
+     */
+    total_usage_count?: number;
+    /**
+     * Max Usage Count
+     */
+    max_usage_count?: number | null;
+    /**
+     * Type Quotas
+     */
+    type_quotas?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Token Context
+     */
+    token_context: {
+        [key: string]: unknown;
+    };
+};
+
+/**
+ * GoogleSheetTokenPublic
+ */
+export type GoogleSheetTokenPublic = {
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Is Active
+     */
+    is_active?: boolean;
+    /**
+     * Current In Use Count
+     */
+    current_in_use_count?: number;
+    /**
+     * Total Usage Count
+     */
+    total_usage_count?: number;
+    /**
+     * Max Usage Count
+     */
+    max_usage_count?: number | null;
+    /**
+     * Type Quotas
+     */
+    type_quotas?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Token Context
+     */
+    token_context: {
+        [key: string]: unknown;
+    };
+    /**
+     * Created At
+     */
+    created_at?: string | null;
+};
+
+/**
+ * GoogleSheetTokenUpdate
+ */
+export type GoogleSheetTokenUpdate = {
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Is Active
+     */
+    is_active?: boolean | null;
+    /**
+     * Max Usage Count
+     */
+    max_usage_count?: number | null;
+    /**
+     * Type Quotas
+     */
+    type_quotas?: {
+        [key: string]: unknown;
+    } | null;
+};
+
+/**
+ * GoogleSheetTokensPublic
+ */
+export type GoogleSheetTokensPublic = {
+    /**
+     * Data
+     */
+    data: Array<GoogleSheetTokenPublic>;
+    /**
+     * Count
+     */
+    count: number;
+};
+
+/**
+ * GoogleSheetUpdate
+ */
+export type GoogleSheetUpdate = {
+    /**
+     * Spreadsheet Id
+     */
+    spreadsheet_id?: string | null;
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Registry Scope
+     */
+    registry_scope?: string | null;
+};
+
+/**
+ * GoogleSheetsPublic
+ */
+export type GoogleSheetsPublic = {
+    /**
+     * Data
+     */
+    data: Array<GoogleSheetPublic>;
+    /**
+     * Count
+     */
+    count: number;
 };
 
 /**
@@ -123,6 +343,118 @@ export type Message = {
 };
 
 /**
+ * NavigationMenuItemCreate
+ */
+export type NavigationMenuItemCreate = {
+    /**
+     * Title
+     */
+    title: string;
+    /**
+     * Path
+     */
+    path: string;
+    /**
+     * Icon
+     */
+    icon?: string | null;
+    /**
+     * Group Name
+     */
+    group_name?: string | null;
+    /**
+     * Sort Order
+     */
+    sort_order?: number;
+    /**
+     * Is Visible
+     */
+    is_visible?: boolean;
+};
+
+/**
+ * NavigationMenuItemPublic
+ */
+export type NavigationMenuItemPublic = {
+    /**
+     * Title
+     */
+    title: string;
+    /**
+     * Path
+     */
+    path: string;
+    /**
+     * Icon
+     */
+    icon?: string | null;
+    /**
+     * Group Name
+     */
+    group_name?: string | null;
+    /**
+     * Sort Order
+     */
+    sort_order?: number;
+    /**
+     * Is Visible
+     */
+    is_visible?: boolean;
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Created At
+     */
+    created_at?: string | null;
+};
+
+/**
+ * NavigationMenuItemUpdate
+ */
+export type NavigationMenuItemUpdate = {
+    /**
+     * Title
+     */
+    title?: string | null;
+    /**
+     * Path
+     */
+    path?: string | null;
+    /**
+     * Icon
+     */
+    icon?: string | null;
+    /**
+     * Group Name
+     */
+    group_name?: string | null;
+    /**
+     * Sort Order
+     */
+    sort_order?: number | null;
+    /**
+     * Is Visible
+     */
+    is_visible?: boolean | null;
+};
+
+/**
+ * NavigationMenuItemsPublic
+ */
+export type NavigationMenuItemsPublic = {
+    /**
+     * Data
+     */
+    data: Array<NavigationMenuItemPublic>;
+    /**
+     * Count
+     */
+    count: number;
+};
+
+/**
  * NewPassword
  */
 export type NewPassword = {
@@ -134,6 +466,20 @@ export type NewPassword = {
      * New Password
      */
     new_password: string;
+};
+
+/**
+ * PreviewGroupRequest
+ */
+export type PreviewGroupRequest = {
+    /**
+     * Group Keys
+     */
+    group_keys?: Array<string> | null;
+    /**
+     * Best Only
+     */
+    best_only?: boolean;
 };
 
 /**
@@ -159,6 +505,660 @@ export type PrivateUserCreate = {
 };
 
 /**
+ * ReturnSeriesPointPublic
+ */
+export type ReturnSeriesPointPublic = {
+    /**
+     * Task Result Id
+     */
+    task_result_id: number;
+    /**
+     * Date
+     */
+    date: string;
+    /**
+     * Index Return
+     */
+    index_return?: number | null;
+    /**
+     * Start Return
+     */
+    start_return?: number | null;
+};
+
+/**
+ * ScheduledTaskCreate
+ */
+export type ScheduledTaskCreate = {
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Task Type
+     */
+    task_type: string;
+    /**
+     * Cron Expression
+     */
+    cron_expression: string;
+    /**
+     * Params
+     */
+    params?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Enabled
+     */
+    enabled?: boolean;
+};
+
+/**
+ * ScheduledTaskPublic
+ */
+export type ScheduledTaskPublic = {
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Task Type
+     */
+    task_type: string;
+    /**
+     * Cron Expression
+     */
+    cron_expression: string;
+    /**
+     * Params
+     */
+    params?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Enabled
+     */
+    enabled?: boolean;
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Is Running
+     */
+    is_running: boolean;
+    /**
+     * Running Instance Id
+     */
+    running_instance_id?: string | null;
+    /**
+     * Last Run At
+     */
+    last_run_at?: string | null;
+    /**
+     * Last Status
+     */
+    last_status?: string | null;
+    /**
+     * Last Error
+     */
+    last_error?: string | null;
+    /**
+     * Created At
+     */
+    created_at?: string | null;
+};
+
+/**
+ * ScheduledTaskUpdate
+ */
+export type ScheduledTaskUpdate = {
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Task Type
+     */
+    task_type?: string | null;
+    /**
+     * Cron Expression
+     */
+    cron_expression?: string | null;
+    /**
+     * Params
+     */
+    params?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Enabled
+     */
+    enabled?: boolean | null;
+};
+
+/**
+ * ScheduledTasksPublic
+ */
+export type ScheduledTasksPublic = {
+    /**
+     * Data
+     */
+    data: Array<ScheduledTaskPublic>;
+    /**
+     * Count
+     */
+    count: number;
+};
+
+/**
+ * SystemConfigUpdate
+ */
+export type SystemConfigUpdate = {
+    /**
+     * Value
+     */
+    value: string;
+};
+
+/**
+ * TaskCreate
+ */
+export type TaskCreate = {
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Description
+     */
+    description?: string | null;
+    /**
+     * Task Type
+     */
+    task_type?: string;
+    /**
+     * Config
+     */
+    config?: {
+        [key: string]: unknown;
+    } | null;
+};
+
+/**
+ * TaskLogPublic
+ */
+export type TaskLogPublic = {
+    /**
+     * Task Id
+     */
+    task_id: number;
+    /**
+     * Level
+     */
+    level?: string;
+    /**
+     * Message
+     */
+    message: string;
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Created At
+     */
+    created_at?: string | null;
+};
+
+/**
+ * TaskLogsPublic
+ */
+export type TaskLogsPublic = {
+    /**
+     * Data
+     */
+    data: Array<TaskLogPublic>;
+    /**
+     * Count
+     */
+    count: number;
+};
+
+/**
+ * TaskPublic
+ */
+export type TaskPublic = {
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Description
+     */
+    description?: string | null;
+    /**
+     * Task Type
+     */
+    task_type?: string;
+    /**
+     * Config
+     */
+    config?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Status
+     */
+    status: string;
+    /**
+     * Spreadsheet Id
+     */
+    spreadsheet_id?: string | null;
+    /**
+     * Stock Code
+     */
+    stock_code?: string | null;
+    /**
+     * Market Type
+     */
+    market_type?: string | null;
+    /**
+     * Current Step
+     */
+    current_step: number;
+    /**
+     * Total Steps
+     */
+    total_steps: number;
+    /**
+     * Error Message
+     */
+    error_message?: string | null;
+    /**
+     * Stop Requested
+     */
+    stop_requested: boolean;
+    /**
+     * Running Instance
+     */
+    running_instance?: string | null;
+    /**
+     * Heartbeat At
+     */
+    heartbeat_at?: string | null;
+    /**
+     * Started At
+     */
+    started_at?: string | null;
+    /**
+     * Finished At
+     */
+    finished_at?: string | null;
+    /**
+     * Created At
+     */
+    created_at?: string | null;
+};
+
+/**
+ * TaskResultListItem
+ *
+ * Lightweight projection for list/polling endpoints: hot columns only,
+ * never the heavy params/result JSON payloads.
+ */
+export type TaskResultListItem = {
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Task Id
+     */
+    task_id: number;
+    /**
+     * Step Index
+     */
+    step_index: number;
+    /**
+     * Success
+     */
+    success: boolean;
+    /**
+     * Error Message
+     */
+    error_message?: string | null;
+    /**
+     * Stock Code
+     */
+    stock_code?: string | null;
+    /**
+     * Stock Name
+     */
+    stock_name?: string | null;
+    /**
+     * Model Key
+     */
+    model_key: string;
+    /**
+     * Model Name
+     */
+    model_name?: string | null;
+    /**
+     * Period Key
+     */
+    period_key?: string | null;
+    /**
+     * Year Label
+     */
+    year_label?: string | null;
+    /**
+     * Kline Range
+     */
+    kline_range?: string | null;
+    /**
+     * Best Metric Name
+     */
+    best_metric_name?: string | null;
+    /**
+     * Best Metric Value
+     */
+    best_metric_value?: number | null;
+    /**
+     * Is Best
+     */
+    is_best: boolean;
+    /**
+     * Result Timestamp
+     */
+    result_timestamp: string;
+    /**
+     * Created At
+     */
+    created_at?: string | null;
+};
+
+/**
+ * TaskResultListPublic
+ */
+export type TaskResultListPublic = {
+    /**
+     * Data
+     */
+    data: Array<TaskResultListItem>;
+    /**
+     * Count
+     */
+    count: number;
+};
+
+/**
+ * TaskResultPublic
+ */
+export type TaskResultPublic = {
+    /**
+     * Task Id
+     */
+    task_id: number;
+    /**
+     * Step Index
+     */
+    step_index: number;
+    /**
+     * Success
+     */
+    success?: boolean;
+    /**
+     * Error Message
+     */
+    error_message?: string | null;
+    /**
+     * Params
+     */
+    params?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Result
+     */
+    result?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Stock Code
+     */
+    stock_code?: string | null;
+    /**
+     * Stock Name
+     */
+    stock_name?: string | null;
+    /**
+     * Model Key
+     */
+    model_key?: string;
+    /**
+     * Model Name
+     */
+    model_name?: string | null;
+    /**
+     * Period Key
+     */
+    period_key?: string | null;
+    /**
+     * Year Label
+     */
+    year_label?: string | null;
+    /**
+     * Kline Range
+     */
+    kline_range?: string | null;
+    /**
+     * Best Metric Name
+     */
+    best_metric_name?: string | null;
+    /**
+     * Best Metric Value
+     */
+    best_metric_value?: number | null;
+    /**
+     * Is Best
+     */
+    is_best?: boolean;
+    /**
+     * Result Timestamp
+     */
+    result_timestamp?: string;
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Created At
+     */
+    created_at?: string | null;
+};
+
+/**
+ * TaskStatistics
+ */
+export type TaskStatistics = {
+    /**
+     * Total
+     */
+    total: number;
+    /**
+     * By Status
+     */
+    by_status: {
+        [key: string]: number;
+    };
+    /**
+     * Avg Running Seconds
+     */
+    avg_running_seconds?: number | null;
+};
+
+/**
+ * TaskStatusCheck
+ */
+export type TaskStatusCheck = {
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Status
+     */
+    status: string;
+    /**
+     * Current Step
+     */
+    current_step: number;
+    /**
+     * Total Steps
+     */
+    total_steps: number;
+    /**
+     * Heartbeat At
+     */
+    heartbeat_at?: string | null;
+    /**
+     * Running Instance
+     */
+    running_instance?: string | null;
+    /**
+     * Latest Log
+     */
+    latest_log?: string | null;
+};
+
+/**
+ * TaskTemplateCreate
+ */
+export type TaskTemplateCreate = {
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Description
+     */
+    description?: string | null;
+    /**
+     * Config
+     */
+    config?: {
+        [key: string]: unknown;
+    } | null;
+};
+
+/**
+ * TaskTemplatePublic
+ */
+export type TaskTemplatePublic = {
+    /**
+     * Name
+     */
+    name: string;
+    /**
+     * Description
+     */
+    description?: string | null;
+    /**
+     * Config
+     */
+    config?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Id
+     */
+    id: number;
+    /**
+     * Created At
+     */
+    created_at?: string | null;
+    /**
+     * Updated At
+     */
+    updated_at?: string | null;
+};
+
+/**
+ * TaskTemplateUpdate
+ */
+export type TaskTemplateUpdate = {
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Description
+     */
+    description?: string | null;
+    /**
+     * Config
+     */
+    config?: {
+        [key: string]: unknown;
+    } | null;
+};
+
+/**
+ * TaskTemplatesPublic
+ */
+export type TaskTemplatesPublic = {
+    /**
+     * Data
+     */
+    data: Array<TaskTemplatePublic>;
+    /**
+     * Count
+     */
+    count: number;
+};
+
+/**
+ * TaskUpdate
+ */
+export type TaskUpdate = {
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Description
+     */
+    description?: string | null;
+    /**
+     * Config
+     */
+    config?: {
+        [key: string]: unknown;
+    } | null;
+};
+
+/**
+ * TasksPublic
+ */
+export type TasksPublic = {
+    /**
+     * Data
+     */
+    data: Array<TaskPublic>;
+    /**
+     * Count
+     */
+    count: number;
+    statistics?: TaskStatistics | null;
+};
+
+/**
  * Token
  */
 export type Token = {
@@ -170,6 +1170,44 @@ export type Token = {
      * Token Type
      */
     token_type?: string;
+};
+
+/**
+ * TokenImportRequest
+ */
+export type TokenImportRequest = {
+    /**
+     * Name
+     */
+    name?: string | null;
+    /**
+     * Is Active
+     */
+    is_active?: boolean;
+    /**
+     * Current In Use Count
+     */
+    current_in_use_count?: number;
+    /**
+     * Total Usage Count
+     */
+    total_usage_count?: number;
+    /**
+     * Max Usage Count
+     */
+    max_usage_count?: number | null;
+    /**
+     * Type Quotas
+     */
+    type_quotas?: {
+        [key: string]: unknown;
+    } | null;
+    /**
+     * Token Context
+     */
+    token_context: {
+        [key: string]: unknown;
+    };
 };
 
 /**
@@ -920,6 +1958,2208 @@ export type itemsUpdateItemResponses = {
 };
 
 export type itemsUpdateItemResponse = itemsUpdateItemResponses[keyof itemsUpdateItemResponses];
+
+export type tasksReadTasksData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+        /**
+         * Status
+         */
+        status?: string | null;
+        /**
+         * Task Type
+         */
+        task_type?: string | null;
+        /**
+         * Spreadsheet Id
+         */
+        spreadsheet_id?: string | null;
+        /**
+         * Stock Code
+         */
+        stock_code?: string | null;
+        /**
+         * Keyword
+         */
+        keyword?: string | null;
+        /**
+         * Include Statistics
+         */
+        include_statistics?: boolean;
+    };
+    url: '/api/v1/tasks/';
+};
+
+export type tasksReadTasksErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksReadTasksError = tasksReadTasksErrors[keyof tasksReadTasksErrors];
+
+export type tasksReadTasksResponses = {
+    /**
+     * Successful Response
+     */
+    200: TasksPublic;
+};
+
+export type tasksReadTasksResponse = tasksReadTasksResponses[keyof tasksReadTasksResponses];
+
+export type tasksCreateTaskData = {
+    body: TaskCreate;
+    path?: never;
+    query?: never;
+    url: '/api/v1/tasks/';
+};
+
+export type tasksCreateTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksCreateTaskError = tasksCreateTaskErrors[keyof tasksCreateTaskErrors];
+
+export type tasksCreateTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskPublic;
+};
+
+export type tasksCreateTaskResponse = tasksCreateTaskResponses[keyof tasksCreateTaskResponses];
+
+export type tasksBatchCreateTasksData = {
+    /**
+     * Data
+     */
+    body: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: never;
+    url: '/api/v1/tasks/batch-create';
+};
+
+export type tasksBatchCreateTasksErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksBatchCreateTasksError = tasksBatchCreateTasksErrors[keyof tasksBatchCreateTasksErrors];
+
+export type tasksBatchCreateTasksResponses = {
+    /**
+     * Response Tasks-Batch Create Tasks
+     *
+     * Successful Response
+     */
+    200: Array<TaskPublic>;
+};
+
+export type tasksBatchCreateTasksResponse = tasksBatchCreateTasksResponses[keyof tasksBatchCreateTasksResponses];
+
+export type tasksDeleteTaskData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/tasks/{id}';
+};
+
+export type tasksDeleteTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksDeleteTaskError = tasksDeleteTaskErrors[keyof tasksDeleteTaskErrors];
+
+export type tasksDeleteTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: Message;
+};
+
+export type tasksDeleteTaskResponse = tasksDeleteTaskResponses[keyof tasksDeleteTaskResponses];
+
+export type tasksReadTaskData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/tasks/{id}';
+};
+
+export type tasksReadTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksReadTaskError = tasksReadTaskErrors[keyof tasksReadTaskErrors];
+
+export type tasksReadTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskPublic;
+};
+
+export type tasksReadTaskResponse = tasksReadTaskResponses[keyof tasksReadTaskResponses];
+
+export type tasksUpdateTaskConfigData = {
+    body: TaskUpdate;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/tasks/{id}/config';
+};
+
+export type tasksUpdateTaskConfigErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksUpdateTaskConfigError = tasksUpdateTaskConfigErrors[keyof tasksUpdateTaskConfigErrors];
+
+export type tasksUpdateTaskConfigResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskPublic;
+};
+
+export type tasksUpdateTaskConfigResponse = tasksUpdateTaskConfigResponses[keyof tasksUpdateTaskConfigResponses];
+
+export type tasksCancelTaskData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/tasks/{id}/cancel';
+};
+
+export type tasksCancelTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksCancelTaskError = tasksCancelTaskErrors[keyof tasksCancelTaskErrors];
+
+export type tasksCancelTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskPublic;
+};
+
+export type tasksCancelTaskResponse = tasksCancelTaskResponses[keyof tasksCancelTaskResponses];
+
+export type tasksCreateRestartData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/tasks/{id}/create-restart';
+};
+
+export type tasksCreateRestartErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksCreateRestartError = tasksCreateRestartErrors[keyof tasksCreateRestartErrors];
+
+export type tasksCreateRestartResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskPublic;
+};
+
+export type tasksCreateRestartResponse = tasksCreateRestartResponses[keyof tasksCreateRestartResponses];
+
+export type tasksReadTaskLogsData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+        /**
+         * Level
+         */
+        level?: string | null;
+    };
+    url: '/api/v1/tasks/{id}/logs';
+};
+
+export type tasksReadTaskLogsErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksReadTaskLogsError = tasksReadTaskLogsErrors[keyof tasksReadTaskLogsErrors];
+
+export type tasksReadTaskLogsResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskLogsPublic;
+};
+
+export type tasksReadTaskLogsResponse = tasksReadTaskLogsResponses[keyof tasksReadTaskLogsResponses];
+
+export type tasksReadTaskStatusCheckData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/tasks/{id}/status-check';
+};
+
+export type tasksReadTaskStatusCheckErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type tasksReadTaskStatusCheckError = tasksReadTaskStatusCheckErrors[keyof tasksReadTaskStatusCheckErrors];
+
+export type tasksReadTaskStatusCheckResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskStatusCheck;
+};
+
+export type tasksReadTaskStatusCheckResponse = tasksReadTaskStatusCheckResponses[keyof tasksReadTaskStatusCheckResponses];
+
+export type taskResultsReadTaskResultsData = {
+    body?: never;
+    path: {
+        /**
+         * Task Id
+         */
+        task_id: number;
+    };
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+        /**
+         * Success
+         */
+        success?: boolean | null;
+    };
+    url: '/api/v1/task-results/tasks/{task_id}/results';
+};
+
+export type taskResultsReadTaskResultsErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type taskResultsReadTaskResultsError = taskResultsReadTaskResultsErrors[keyof taskResultsReadTaskResultsErrors];
+
+export type taskResultsReadTaskResultsResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskResultListPublic;
+};
+
+export type taskResultsReadTaskResultsResponse = taskResultsReadTaskResultsResponses[keyof taskResultsReadTaskResultsResponses];
+
+export type taskResultsDeleteTaskResultData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/task-results/{id}';
+};
+
+export type taskResultsDeleteTaskResultErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type taskResultsDeleteTaskResultError = taskResultsDeleteTaskResultErrors[keyof taskResultsDeleteTaskResultErrors];
+
+export type taskResultsDeleteTaskResultResponses = {
+    /**
+     * Successful Response
+     */
+    200: Message;
+};
+
+export type taskResultsDeleteTaskResultResponse = taskResultsDeleteTaskResultResponses[keyof taskResultsDeleteTaskResultResponses];
+
+export type taskResultsReadTaskResultData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/task-results/{id}';
+};
+
+export type taskResultsReadTaskResultErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type taskResultsReadTaskResultError = taskResultsReadTaskResultErrors[keyof taskResultsReadTaskResultErrors];
+
+export type taskResultsReadTaskResultResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskResultPublic;
+};
+
+export type taskResultsReadTaskResultResponse = taskResultsReadTaskResultResponses[keyof taskResultsReadTaskResultResponses];
+
+export type taskResultsReadReturnSeriesData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: {
+        /**
+         * Start
+         */
+        start?: string | null;
+        /**
+         * End
+         */
+        end?: string | null;
+    };
+    url: '/api/v1/task-results/{id}/return-series';
+};
+
+export type taskResultsReadReturnSeriesErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type taskResultsReadReturnSeriesError = taskResultsReadReturnSeriesErrors[keyof taskResultsReadReturnSeriesErrors];
+
+export type taskResultsReadReturnSeriesResponses = {
+    /**
+     * Response Task-Results-Read Return Series
+     *
+     * Successful Response
+     */
+    200: Array<ReturnSeriesPointPublic>;
+};
+
+export type taskResultsReadReturnSeriesResponse = taskResultsReadReturnSeriesResponses[keyof taskResultsReadReturnSeriesResponses];
+
+export type globalPreviewReadGlobalPreviewData = {
+    body?: never;
+    path: {
+        /**
+         * Task Id
+         */
+        task_id: number;
+    };
+    query?: {
+        /**
+         * Best Only
+         */
+        best_only?: boolean;
+    };
+    url: '/api/v1/global-preview/tasks/{task_id}';
+};
+
+export type globalPreviewReadGlobalPreviewErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type globalPreviewReadGlobalPreviewError = globalPreviewReadGlobalPreviewErrors[keyof globalPreviewReadGlobalPreviewErrors];
+
+export type globalPreviewReadGlobalPreviewResponses = {
+    /**
+     * Response Global-Preview-Read Global Preview
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type globalPreviewReadPreviewGroupData = {
+    body: PreviewGroupRequest;
+    path: {
+        /**
+         * Task Id
+         */
+        task_id: number;
+    };
+    query?: never;
+    url: '/api/v1/global-preview/tasks/{task_id}/preview-group';
+};
+
+export type globalPreviewReadPreviewGroupErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type globalPreviewReadPreviewGroupError = globalPreviewReadPreviewGroupErrors[keyof globalPreviewReadPreviewGroupErrors];
+
+export type globalPreviewReadPreviewGroupResponses = {
+    /**
+     * Response Global-Preview-Read Preview Group
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type backtestReadBacktestResultData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/backtest/task-results/{id}';
+};
+
+export type backtestReadBacktestResultErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type backtestReadBacktestResultError = backtestReadBacktestResultErrors[keyof backtestReadBacktestResultErrors];
+
+export type backtestReadBacktestResultResponses = {
+    /**
+     * Response Backtest-Read Backtest Result
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type backtestReadBacktestSummaryData = {
+    body?: never;
+    path: {
+        /**
+         * Task Id
+         */
+        task_id: number;
+    };
+    query?: never;
+    url: '/api/v1/backtest/task-summary/{task_id}';
+};
+
+export type backtestReadBacktestSummaryErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type backtestReadBacktestSummaryError = backtestReadBacktestSummaryErrors[keyof backtestReadBacktestSummaryErrors];
+
+export type backtestReadBacktestSummaryResponses = {
+    /**
+     * Response Backtest-Read Backtest Summary
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type backtestCalculateRatiosData = {
+    /**
+     * Payload
+     */
+    body: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: never;
+    url: '/api/v1/backtest/calculate-ratios';
+};
+
+export type backtestCalculateRatiosErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type backtestCalculateRatiosError = backtestCalculateRatiosErrors[keyof backtestCalculateRatiosErrors];
+
+export type backtestCalculateRatiosResponses = {
+    /**
+     * Response Backtest-Calculate Ratios
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type backtestSaveRatiosData = {
+    /**
+     * Payload
+     */
+    body: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: never;
+    url: '/api/v1/backtest/ratios';
+};
+
+export type backtestSaveRatiosErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type backtestSaveRatiosError = backtestSaveRatiosErrors[keyof backtestSaveRatiosErrors];
+
+export type backtestSaveRatiosResponses = {
+    /**
+     * Response Backtest-Save Ratios
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type backtestReadExportPreviewData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/backtest/task-results/{id}/export-preview';
+};
+
+export type backtestReadExportPreviewErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type backtestReadExportPreviewError = backtestReadExportPreviewErrors[keyof backtestReadExportPreviewErrors];
+
+export type backtestReadExportPreviewResponses = {
+    /**
+     * Response Backtest-Read Export Preview
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type modelSummaryReadModelSummaryData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+        /**
+         * Best Only
+         */
+        best_only?: boolean;
+        /**
+         * Stock Code
+         */
+        stock_code?: string | null;
+        /**
+         * Market Type
+         */
+        market_type?: string | null;
+        /**
+         * Period Key
+         */
+        period_key?: string | null;
+        /**
+         * Task Type
+         */
+        task_type?: string | null;
+        /**
+         * Task Id
+         */
+        task_id?: number | null;
+    };
+    url: '/api/v1/model-summary/';
+};
+
+export type modelSummaryReadModelSummaryErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type modelSummaryReadModelSummaryError = modelSummaryReadModelSummaryErrors[keyof modelSummaryReadModelSummaryErrors];
+
+export type modelSummaryReadModelSummaryResponses = {
+    /**
+     * Response Model-Summary-Read Model Summary
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type modelSummaryRebuildModelSummaryData = {
+    body: BackfillRequest;
+    path?: never;
+    query?: never;
+    url: '/api/v1/model-summary/rebuild';
+};
+
+export type modelSummaryRebuildModelSummaryErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type modelSummaryRebuildModelSummaryError = modelSummaryRebuildModelSummaryErrors[keyof modelSummaryRebuildModelSummaryErrors];
+
+export type modelSummaryRebuildModelSummaryResponses = {
+    /**
+     * Response Model-Summary-Rebuild Model Summary
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type modelSummaryRebuildStatusData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/api/v1/model-summary/rebuild/status';
+};
+
+export type modelSummaryRebuildStatusResponses = {
+    /**
+     * Response Model-Summary-Rebuild Status
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type modelSummarySummaryColumnsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/api/v1/model-summary/columns';
+};
+
+export type modelSummarySummaryColumnsResponses = {
+    /**
+     * Response Model-Summary-Summary Columns
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type exportsExportTaskData = {
+    body?: never;
+    path: {
+        /**
+         * Task Id
+         */
+        task_id: number;
+    };
+    query?: {
+        /**
+         * Format
+         */
+        format?: string;
+    };
+    url: '/api/v1/exports/tasks/{task_id}';
+};
+
+export type exportsExportTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type exportsExportTaskError = exportsExportTaskErrors[keyof exportsExportTaskErrors];
+
+export type exportsExportTaskResponses = {
+    /**
+     * Response Exports-Export Task
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type exportsExportTasksBatchData = {
+    /**
+     * Task Ids
+     */
+    body: Array<number>;
+    path?: never;
+    query?: never;
+    url: '/api/v1/exports/tasks/batch';
+};
+
+export type exportsExportTasksBatchErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type exportsExportTasksBatchError = exportsExportTasksBatchErrors[keyof exportsExportTasksBatchErrors];
+
+export type exportsExportTasksBatchResponses = {
+    /**
+     * Response Exports-Export Tasks Batch
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type exportsExportModelSummaryData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Best Only
+         */
+        best_only?: boolean;
+        /**
+         * Task Id
+         */
+        task_id?: number | null;
+    };
+    url: '/api/v1/exports/model-summary';
+};
+
+export type exportsExportModelSummaryErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type exportsExportModelSummaryError = exportsExportModelSummaryErrors[keyof exportsExportModelSummaryErrors];
+
+export type exportsExportModelSummaryResponses = {
+    /**
+     * Response Exports-Export Model Summary
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type exportsExportGlobalPreviewData = {
+    body?: never;
+    path?: never;
+    query: {
+        /**
+         *  Task Id
+         */
+        _task_id: number;
+    };
+    url: '/api/v1/exports/global-previews/{task_id}';
+};
+
+export type exportsExportGlobalPreviewErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type exportsExportGlobalPreviewError = exportsExportGlobalPreviewErrors[keyof exportsExportGlobalPreviewErrors];
+
+export type exportsExportGlobalPreviewResponses = {
+    /**
+     * Response Exports-Export Global Preview
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type exportsExportWordReportData = {
+    /**
+     *  Payload
+     */
+    body: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: never;
+    url: '/api/v1/exports/backtest-reports/word';
+};
+
+export type exportsExportWordReportErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type exportsExportWordReportError = exportsExportWordReportErrors[keyof exportsExportWordReportErrors];
+
+export type exportsExportWordReportResponses = {
+    /**
+     * Response Exports-Export Word Report
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type performanceAnalysisAnalyzeData = {
+    /**
+     *  Payload
+     */
+    body: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: never;
+    url: '/api/v1/performance-analysis/analyze';
+};
+
+export type performanceAnalysisAnalyzeErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type performanceAnalysisAnalyzeError = performanceAnalysisAnalyzeErrors[keyof performanceAnalysisAnalyzeErrors];
+
+export type performanceAnalysisAnalyzeResponses = {
+    /**
+     * Response Performance-Analysis-Analyze
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type performanceAnalysisAnalyzeStreamData = {
+    /**
+     *  Payload
+     */
+    body: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: never;
+    url: '/api/v1/performance-analysis/v1/analyze';
+};
+
+export type performanceAnalysisAnalyzeStreamErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type performanceAnalysisAnalyzeStreamError = performanceAnalysisAnalyzeStreamErrors[keyof performanceAnalysisAnalyzeStreamErrors];
+
+export type performanceAnalysisAnalyzeStreamResponses = {
+    /**
+     * Response Performance-Analysis-Analyze Stream
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type performanceAnalysisWeightCombinationData = {
+    /**
+     *  Payload
+     */
+    body: {
+        [key: string]: unknown;
+    };
+    path?: never;
+    query?: never;
+    url: '/api/v1/performance-analysis/v1/weight-combination';
+};
+
+export type performanceAnalysisWeightCombinationErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type performanceAnalysisWeightCombinationError = performanceAnalysisWeightCombinationErrors[keyof performanceAnalysisWeightCombinationErrors];
+
+export type performanceAnalysisWeightCombinationResponses = {
+    /**
+     * Response Performance-Analysis-Weight Combination
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type googleSheetsReadGoogleSheetsData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+        /**
+         * Registry Scope
+         */
+        registry_scope?: string | null;
+        /**
+         * Only Available
+         */
+        only_available?: boolean;
+    };
+    url: '/api/v1/google-sheets/';
+};
+
+export type googleSheetsReadGoogleSheetsErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetsReadGoogleSheetsError = googleSheetsReadGoogleSheetsErrors[keyof googleSheetsReadGoogleSheetsErrors];
+
+export type googleSheetsReadGoogleSheetsResponses = {
+    /**
+     * Successful Response
+     */
+    200: GoogleSheetsPublic;
+};
+
+export type googleSheetsReadGoogleSheetsResponse = googleSheetsReadGoogleSheetsResponses[keyof googleSheetsReadGoogleSheetsResponses];
+
+export type googleSheetsCreateGoogleSheetData = {
+    body: GoogleSheetCreate;
+    path?: never;
+    query?: never;
+    url: '/api/v1/google-sheets/';
+};
+
+export type googleSheetsCreateGoogleSheetErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetsCreateGoogleSheetError = googleSheetsCreateGoogleSheetErrors[keyof googleSheetsCreateGoogleSheetErrors];
+
+export type googleSheetsCreateGoogleSheetResponses = {
+    /**
+     * Successful Response
+     */
+    200: GoogleSheetPublic;
+};
+
+export type googleSheetsCreateGoogleSheetResponse = googleSheetsCreateGoogleSheetResponses[keyof googleSheetsCreateGoogleSheetResponses];
+
+export type googleSheetsDeleteGoogleSheetData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/google-sheets/{id}';
+};
+
+export type googleSheetsDeleteGoogleSheetErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetsDeleteGoogleSheetError = googleSheetsDeleteGoogleSheetErrors[keyof googleSheetsDeleteGoogleSheetErrors];
+
+export type googleSheetsDeleteGoogleSheetResponses = {
+    /**
+     * Successful Response
+     */
+    200: Message;
+};
+
+export type googleSheetsDeleteGoogleSheetResponse = googleSheetsDeleteGoogleSheetResponses[keyof googleSheetsDeleteGoogleSheetResponses];
+
+export type googleSheetsReadGoogleSheetData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/google-sheets/{id}';
+};
+
+export type googleSheetsReadGoogleSheetErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetsReadGoogleSheetError = googleSheetsReadGoogleSheetErrors[keyof googleSheetsReadGoogleSheetErrors];
+
+export type googleSheetsReadGoogleSheetResponses = {
+    /**
+     * Successful Response
+     */
+    200: GoogleSheetPublic;
+};
+
+export type googleSheetsReadGoogleSheetResponse = googleSheetsReadGoogleSheetResponses[keyof googleSheetsReadGoogleSheetResponses];
+
+export type googleSheetsUpdateGoogleSheetData = {
+    body: GoogleSheetUpdate;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/google-sheets/{id}';
+};
+
+export type googleSheetsUpdateGoogleSheetErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetsUpdateGoogleSheetError = googleSheetsUpdateGoogleSheetErrors[keyof googleSheetsUpdateGoogleSheetErrors];
+
+export type googleSheetsUpdateGoogleSheetResponses = {
+    /**
+     * Successful Response
+     */
+    200: GoogleSheetPublic;
+};
+
+export type googleSheetsUpdateGoogleSheetResponse = googleSheetsUpdateGoogleSheetResponses[keyof googleSheetsUpdateGoogleSheetResponses];
+
+export type googleSheetTokensReadGoogleSheetTokensData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+    };
+    url: '/api/v1/google-sheet-tokens/';
+};
+
+export type googleSheetTokensReadGoogleSheetTokensErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetTokensReadGoogleSheetTokensError = googleSheetTokensReadGoogleSheetTokensErrors[keyof googleSheetTokensReadGoogleSheetTokensErrors];
+
+export type googleSheetTokensReadGoogleSheetTokensResponses = {
+    /**
+     * Successful Response
+     */
+    200: GoogleSheetTokensPublic;
+};
+
+export type googleSheetTokensReadGoogleSheetTokensResponse = googleSheetTokensReadGoogleSheetTokensResponses[keyof googleSheetTokensReadGoogleSheetTokensResponses];
+
+export type googleSheetTokensCreateGoogleSheetTokenData = {
+    body: GoogleSheetTokenCreate;
+    path?: never;
+    query?: never;
+    url: '/api/v1/google-sheet-tokens/';
+};
+
+export type googleSheetTokensCreateGoogleSheetTokenErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetTokensCreateGoogleSheetTokenError = googleSheetTokensCreateGoogleSheetTokenErrors[keyof googleSheetTokensCreateGoogleSheetTokenErrors];
+
+export type googleSheetTokensCreateGoogleSheetTokenResponses = {
+    /**
+     * Successful Response
+     */
+    200: GoogleSheetTokenPublic;
+};
+
+export type googleSheetTokensCreateGoogleSheetTokenResponse = googleSheetTokensCreateGoogleSheetTokenResponses[keyof googleSheetTokensCreateGoogleSheetTokenResponses];
+
+export type googleSheetTokensImportGoogleSheetTokensData = {
+    /**
+     * Tokens
+     */
+    body: Array<TokenImportRequest>;
+    path?: never;
+    query?: never;
+    url: '/api/v1/google-sheet-tokens/import';
+};
+
+export type googleSheetTokensImportGoogleSheetTokensErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetTokensImportGoogleSheetTokensError = googleSheetTokensImportGoogleSheetTokensErrors[keyof googleSheetTokensImportGoogleSheetTokensErrors];
+
+export type googleSheetTokensImportGoogleSheetTokensResponses = {
+    /**
+     * Response Google-Sheet-Tokens-Import Google Sheet Tokens
+     *
+     * Successful Response
+     */
+    200: Array<GoogleSheetTokenPublic>;
+};
+
+export type googleSheetTokensImportGoogleSheetTokensResponse = googleSheetTokensImportGoogleSheetTokensResponses[keyof googleSheetTokensImportGoogleSheetTokensResponses];
+
+export type googleSheetTokensReconcileGoogleSheetTokensData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/api/v1/google-sheet-tokens/reconcile';
+};
+
+export type googleSheetTokensReconcileGoogleSheetTokensResponses = {
+    /**
+     * Successful Response
+     */
+    200: Message;
+};
+
+export type googleSheetTokensReconcileGoogleSheetTokensResponse = googleSheetTokensReconcileGoogleSheetTokensResponses[keyof googleSheetTokensReconcileGoogleSheetTokensResponses];
+
+export type googleSheetTokensDeleteGoogleSheetTokenData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/google-sheet-tokens/{id}';
+};
+
+export type googleSheetTokensDeleteGoogleSheetTokenErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetTokensDeleteGoogleSheetTokenError = googleSheetTokensDeleteGoogleSheetTokenErrors[keyof googleSheetTokensDeleteGoogleSheetTokenErrors];
+
+export type googleSheetTokensDeleteGoogleSheetTokenResponses = {
+    /**
+     * Successful Response
+     */
+    200: Message;
+};
+
+export type googleSheetTokensDeleteGoogleSheetTokenResponse = googleSheetTokensDeleteGoogleSheetTokenResponses[keyof googleSheetTokensDeleteGoogleSheetTokenResponses];
+
+export type googleSheetTokensReadGoogleSheetTokenData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/google-sheet-tokens/{id}';
+};
+
+export type googleSheetTokensReadGoogleSheetTokenErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetTokensReadGoogleSheetTokenError = googleSheetTokensReadGoogleSheetTokenErrors[keyof googleSheetTokensReadGoogleSheetTokenErrors];
+
+export type googleSheetTokensReadGoogleSheetTokenResponses = {
+    /**
+     * Successful Response
+     */
+    200: GoogleSheetTokenPublic;
+};
+
+export type googleSheetTokensReadGoogleSheetTokenResponse = googleSheetTokensReadGoogleSheetTokenResponses[keyof googleSheetTokensReadGoogleSheetTokenResponses];
+
+export type googleSheetTokensUpdateGoogleSheetTokenData = {
+    body: GoogleSheetTokenUpdate;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/google-sheet-tokens/{id}';
+};
+
+export type googleSheetTokensUpdateGoogleSheetTokenErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type googleSheetTokensUpdateGoogleSheetTokenError = googleSheetTokensUpdateGoogleSheetTokenErrors[keyof googleSheetTokensUpdateGoogleSheetTokenErrors];
+
+export type googleSheetTokensUpdateGoogleSheetTokenResponses = {
+    /**
+     * Successful Response
+     */
+    200: GoogleSheetTokenPublic;
+};
+
+export type googleSheetTokensUpdateGoogleSheetTokenResponse = googleSheetTokensUpdateGoogleSheetTokenResponses[keyof googleSheetTokensUpdateGoogleSheetTokenResponses];
+
+export type scheduledTasksReadScheduledTasksData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+    };
+    url: '/api/v1/scheduled-tasks/';
+};
+
+export type scheduledTasksReadScheduledTasksErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type scheduledTasksReadScheduledTasksError = scheduledTasksReadScheduledTasksErrors[keyof scheduledTasksReadScheduledTasksErrors];
+
+export type scheduledTasksReadScheduledTasksResponses = {
+    /**
+     * Successful Response
+     */
+    200: ScheduledTasksPublic;
+};
+
+export type scheduledTasksReadScheduledTasksResponse = scheduledTasksReadScheduledTasksResponses[keyof scheduledTasksReadScheduledTasksResponses];
+
+export type scheduledTasksCreateScheduledTaskData = {
+    body: ScheduledTaskCreate;
+    path?: never;
+    query?: never;
+    url: '/api/v1/scheduled-tasks/';
+};
+
+export type scheduledTasksCreateScheduledTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type scheduledTasksCreateScheduledTaskError = scheduledTasksCreateScheduledTaskErrors[keyof scheduledTasksCreateScheduledTaskErrors];
+
+export type scheduledTasksCreateScheduledTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: ScheduledTaskPublic;
+};
+
+export type scheduledTasksCreateScheduledTaskResponse = scheduledTasksCreateScheduledTaskResponses[keyof scheduledTasksCreateScheduledTaskResponses];
+
+export type scheduledTasksReadSchedulerStatsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/api/v1/scheduled-tasks/scheduler/stats';
+};
+
+export type scheduledTasksReadSchedulerStatsResponses = {
+    /**
+     * Response Scheduled-Tasks-Read Scheduler Stats
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type scheduledTasksDeleteScheduledTaskData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/scheduled-tasks/{id}';
+};
+
+export type scheduledTasksDeleteScheduledTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type scheduledTasksDeleteScheduledTaskError = scheduledTasksDeleteScheduledTaskErrors[keyof scheduledTasksDeleteScheduledTaskErrors];
+
+export type scheduledTasksDeleteScheduledTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: Message;
+};
+
+export type scheduledTasksDeleteScheduledTaskResponse = scheduledTasksDeleteScheduledTaskResponses[keyof scheduledTasksDeleteScheduledTaskResponses];
+
+export type scheduledTasksReadScheduledTaskData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/scheduled-tasks/{id}';
+};
+
+export type scheduledTasksReadScheduledTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type scheduledTasksReadScheduledTaskError = scheduledTasksReadScheduledTaskErrors[keyof scheduledTasksReadScheduledTaskErrors];
+
+export type scheduledTasksReadScheduledTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: ScheduledTaskPublic;
+};
+
+export type scheduledTasksReadScheduledTaskResponse = scheduledTasksReadScheduledTaskResponses[keyof scheduledTasksReadScheduledTaskResponses];
+
+export type scheduledTasksUpdateScheduledTaskData = {
+    body: ScheduledTaskUpdate;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/scheduled-tasks/{id}';
+};
+
+export type scheduledTasksUpdateScheduledTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type scheduledTasksUpdateScheduledTaskError = scheduledTasksUpdateScheduledTaskErrors[keyof scheduledTasksUpdateScheduledTaskErrors];
+
+export type scheduledTasksUpdateScheduledTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: ScheduledTaskPublic;
+};
+
+export type scheduledTasksUpdateScheduledTaskResponse = scheduledTasksUpdateScheduledTaskResponses[keyof scheduledTasksUpdateScheduledTaskResponses];
+
+export type scheduledTasksToggleScheduledTaskData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/scheduled-tasks/{id}/toggle';
+};
+
+export type scheduledTasksToggleScheduledTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type scheduledTasksToggleScheduledTaskError = scheduledTasksToggleScheduledTaskErrors[keyof scheduledTasksToggleScheduledTaskErrors];
+
+export type scheduledTasksToggleScheduledTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: ScheduledTaskPublic;
+};
+
+export type scheduledTasksToggleScheduledTaskResponse = scheduledTasksToggleScheduledTaskResponses[keyof scheduledTasksToggleScheduledTaskResponses];
+
+export type scheduledTasksRunScheduledTaskData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/scheduled-tasks/{id}/run';
+};
+
+export type scheduledTasksRunScheduledTaskErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type scheduledTasksRunScheduledTaskError = scheduledTasksRunScheduledTaskErrors[keyof scheduledTasksRunScheduledTaskErrors];
+
+export type scheduledTasksRunScheduledTaskResponses = {
+    /**
+     * Successful Response
+     */
+    200: Message;
+};
+
+export type scheduledTasksRunScheduledTaskResponse = scheduledTasksRunScheduledTaskResponses[keyof scheduledTasksRunScheduledTaskResponses];
+
+export type taskTemplatesReadTaskTemplatesData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+    };
+    url: '/api/v1/task-templates/';
+};
+
+export type taskTemplatesReadTaskTemplatesErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type taskTemplatesReadTaskTemplatesError = taskTemplatesReadTaskTemplatesErrors[keyof taskTemplatesReadTaskTemplatesErrors];
+
+export type taskTemplatesReadTaskTemplatesResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskTemplatesPublic;
+};
+
+export type taskTemplatesReadTaskTemplatesResponse = taskTemplatesReadTaskTemplatesResponses[keyof taskTemplatesReadTaskTemplatesResponses];
+
+export type taskTemplatesCreateTaskTemplateData = {
+    body: TaskTemplateCreate;
+    path?: never;
+    query?: never;
+    url: '/api/v1/task-templates/';
+};
+
+export type taskTemplatesCreateTaskTemplateErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type taskTemplatesCreateTaskTemplateError = taskTemplatesCreateTaskTemplateErrors[keyof taskTemplatesCreateTaskTemplateErrors];
+
+export type taskTemplatesCreateTaskTemplateResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskTemplatePublic;
+};
+
+export type taskTemplatesCreateTaskTemplateResponse = taskTemplatesCreateTaskTemplateResponses[keyof taskTemplatesCreateTaskTemplateResponses];
+
+export type taskTemplatesDeleteTaskTemplateData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/task-templates/{id}';
+};
+
+export type taskTemplatesDeleteTaskTemplateErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type taskTemplatesDeleteTaskTemplateError = taskTemplatesDeleteTaskTemplateErrors[keyof taskTemplatesDeleteTaskTemplateErrors];
+
+export type taskTemplatesDeleteTaskTemplateResponses = {
+    /**
+     * Successful Response
+     */
+    200: Message;
+};
+
+export type taskTemplatesDeleteTaskTemplateResponse = taskTemplatesDeleteTaskTemplateResponses[keyof taskTemplatesDeleteTaskTemplateResponses];
+
+export type taskTemplatesReadTaskTemplateData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/task-templates/{id}';
+};
+
+export type taskTemplatesReadTaskTemplateErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type taskTemplatesReadTaskTemplateError = taskTemplatesReadTaskTemplateErrors[keyof taskTemplatesReadTaskTemplateErrors];
+
+export type taskTemplatesReadTaskTemplateResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskTemplatePublic;
+};
+
+export type taskTemplatesReadTaskTemplateResponse = taskTemplatesReadTaskTemplateResponses[keyof taskTemplatesReadTaskTemplateResponses];
+
+export type taskTemplatesUpdateTaskTemplateData = {
+    body: TaskTemplateUpdate;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/task-templates/{id}';
+};
+
+export type taskTemplatesUpdateTaskTemplateErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type taskTemplatesUpdateTaskTemplateError = taskTemplatesUpdateTaskTemplateErrors[keyof taskTemplatesUpdateTaskTemplateErrors];
+
+export type taskTemplatesUpdateTaskTemplateResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskTemplatePublic;
+};
+
+export type taskTemplatesUpdateTaskTemplateResponse = taskTemplatesUpdateTaskTemplateResponses[keyof taskTemplatesUpdateTaskTemplateResponses];
+
+export type stocksSearchStocksData = {
+    body?: never;
+    path?: never;
+    query: {
+        /**
+         * Keyword
+         */
+        keyword: string;
+        /**
+         * Market Type
+         */
+        market_type?: string | null;
+        /**
+         * Limit
+         */
+        limit?: number;
+    };
+    url: '/api/v1/stocks/search';
+};
+
+export type stocksSearchStocksErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type stocksSearchStocksError = stocksSearchStocksErrors[keyof stocksSearchStocksErrors];
+
+export type stocksSearchStocksResponses = {
+    /**
+     * Response Stocks-Search Stocks
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type stocksReadStockData = {
+    body?: never;
+    path: {
+        /**
+         * Market Type
+         */
+        market_type: string;
+        /**
+         * Code
+         */
+        code: string;
+    };
+    query?: never;
+    url: '/api/v1/stocks/{market_type}/{code}';
+};
+
+export type stocksReadStockErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type stocksReadStockError = stocksReadStockErrors[keyof stocksReadStockErrors];
+
+export type stocksReadStockResponses = {
+    /**
+     * Response Stocks-Read Stock
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type configsReadConfigsData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+    };
+    url: '/api/v1/configs/';
+};
+
+export type configsReadConfigsErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type configsReadConfigsError = configsReadConfigsErrors[keyof configsReadConfigsErrors];
+
+export type configsReadConfigsResponses = {
+    /**
+     * Response Configs-Read Configs
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type configsValidateConfigsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/api/v1/configs/validate';
+};
+
+export type configsValidateConfigsResponses = {
+    /**
+     * Response Configs-Validate Configs
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type configsReadConfigData = {
+    body?: never;
+    path: {
+        /**
+         * Key
+         */
+        key: string;
+    };
+    query?: never;
+    url: '/api/v1/configs/{key}';
+};
+
+export type configsReadConfigErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type configsReadConfigError = configsReadConfigErrors[keyof configsReadConfigErrors];
+
+export type configsReadConfigResponses = {
+    /**
+     * Response Configs-Read Config
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type configsUpdateConfigData = {
+    body: SystemConfigUpdate;
+    path: {
+        /**
+         * Key
+         */
+        key: string;
+    };
+    query?: never;
+    url: '/api/v1/configs/{key}';
+};
+
+export type configsUpdateConfigErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type configsUpdateConfigError = configsUpdateConfigErrors[keyof configsUpdateConfigErrors];
+
+export type configsUpdateConfigResponses = {
+    /**
+     * Response Configs-Update Config
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type navigationReadNavigationItemsData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+        /**
+         * Visible Only
+         */
+        visible_only?: boolean;
+    };
+    url: '/api/v1/navigation-menu-items/';
+};
+
+export type navigationReadNavigationItemsErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type navigationReadNavigationItemsError = navigationReadNavigationItemsErrors[keyof navigationReadNavigationItemsErrors];
+
+export type navigationReadNavigationItemsResponses = {
+    /**
+     * Successful Response
+     */
+    200: NavigationMenuItemsPublic;
+};
+
+export type navigationReadNavigationItemsResponse = navigationReadNavigationItemsResponses[keyof navigationReadNavigationItemsResponses];
+
+export type navigationCreateNavigationItemData = {
+    body: NavigationMenuItemCreate;
+    path?: never;
+    query?: never;
+    url: '/api/v1/navigation-menu-items/';
+};
+
+export type navigationCreateNavigationItemErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type navigationCreateNavigationItemError = navigationCreateNavigationItemErrors[keyof navigationCreateNavigationItemErrors];
+
+export type navigationCreateNavigationItemResponses = {
+    /**
+     * Successful Response
+     */
+    200: NavigationMenuItemPublic;
+};
+
+export type navigationCreateNavigationItemResponse = navigationCreateNavigationItemResponses[keyof navigationCreateNavigationItemResponses];
+
+export type navigationDeleteNavigationItemData = {
+    body?: never;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/navigation-menu-items/{id}';
+};
+
+export type navigationDeleteNavigationItemErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type navigationDeleteNavigationItemError = navigationDeleteNavigationItemErrors[keyof navigationDeleteNavigationItemErrors];
+
+export type navigationDeleteNavigationItemResponses = {
+    /**
+     * Successful Response
+     */
+    200: Message;
+};
+
+export type navigationDeleteNavigationItemResponse = navigationDeleteNavigationItemResponses[keyof navigationDeleteNavigationItemResponses];
+
+export type navigationUpdateNavigationItemData = {
+    body: NavigationMenuItemUpdate;
+    path: {
+        /**
+         * Id
+         */
+        id: number;
+    };
+    query?: never;
+    url: '/api/v1/navigation-menu-items/{id}';
+};
+
+export type navigationUpdateNavigationItemErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type navigationUpdateNavigationItemError = navigationUpdateNavigationItemErrors[keyof navigationUpdateNavigationItemErrors];
+
+export type navigationUpdateNavigationItemResponses = {
+    /**
+     * Successful Response
+     */
+    200: NavigationMenuItemPublic;
+};
+
+export type navigationUpdateNavigationItemResponse = navigationUpdateNavigationItemResponses[keyof navigationUpdateNavigationItemResponses];
+
+export type logsReadLogsData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Skip
+         */
+        skip?: number;
+        /**
+         * Limit
+         */
+        limit?: number;
+        /**
+         * Level
+         */
+        level?: string | null;
+        /**
+         * Task Id
+         */
+        task_id?: number | null;
+        /**
+         * Start
+         */
+        start?: string | null;
+        /**
+         * End
+         */
+        end?: string | null;
+    };
+    url: '/api/v1/logs/';
+};
+
+export type logsReadLogsErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type logsReadLogsError = logsReadLogsErrors[keyof logsReadLogsErrors];
+
+export type logsReadLogsResponses = {
+    /**
+     * Successful Response
+     */
+    200: TaskLogsPublic;
+};
+
+export type logsReadLogsResponse = logsReadLogsResponses[keyof logsReadLogsResponses];
+
+export type logsReadLatestLogsData = {
+    body?: never;
+    path?: never;
+    query?: {
+        /**
+         * Limit
+         */
+        limit?: number;
+    };
+    url: '/api/v1/logs/latest';
+};
+
+export type logsReadLatestLogsErrors = {
+    /**
+     * Validation Error
+     */
+    422: HTTPValidationError;
+};
+
+export type logsReadLatestLogsError = logsReadLatestLogsErrors[keyof logsReadLatestLogsErrors];
+
+export type logsReadLatestLogsResponses = {
+    /**
+     * Response Logs-Read Latest Logs
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type metaReadVersionsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/api/v1/meta/versions';
+};
+
+export type metaReadVersionsResponses = {
+    /**
+     * Response Meta-Read Versions
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
+
+export type metaReadEnumsData = {
+    body?: never;
+    path?: never;
+    query?: never;
+    url: '/api/v1/meta/enums';
+};
+
+export type metaReadEnumsResponses = {
+    /**
+     * Response Meta-Read Enums
+     *
+     * Successful Response
+     */
+    200: unknown;
+};
 
 export type privateCreateUserData = {
     body: PrivateUserCreate;

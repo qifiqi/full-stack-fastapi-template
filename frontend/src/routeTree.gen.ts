@@ -16,8 +16,20 @@ import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as SignupRouteImport } from './routes/signup'
 import { Route as LayoutIndexRouteImport } from './routes/_layout/index'
 import { Route as LayoutAdminRouteImport } from './routes/_layout/admin'
+import { Route as LayoutBacktestRouteImport } from './routes/_layout/backtest'
+import { Route as LayoutGoogleSheetTokensRouteImport } from './routes/_layout/google-sheet-tokens'
+import { Route as LayoutGoogleSheetsRouteImport } from './routes/_layout/google-sheets'
 import { Route as LayoutItemsRouteImport } from './routes/_layout/items'
+import { Route as LayoutModelSummaryRouteImport } from './routes/_layout/model-summary'
+import { Route as LayoutPerformanceAnalysisRouteImport } from './routes/_layout/performance-analysis'
+import { Route as LayoutResultsRouteImport } from './routes/_layout/results'
+import { Route as LayoutScheduledTasksRouteImport } from './routes/_layout/scheduled-tasks'
 import { Route as LayoutSettingsRouteImport } from './routes/_layout/settings'
+import { Route as LayoutSystemRouteImport } from './routes/_layout/system'
+import { Route as LayoutTasksIndexRouteImport } from './routes/_layout/tasks/index'
+import { Route as LayoutTasksTaskIdRouteImport } from './routes/_layout/tasks/$taskId'
+import { Route as LayoutTasksCreateRouteImport } from './routes/_layout/tasks/create'
+import { Route as LayoutTasksExportRouteImport } from './routes/_layout/tasks/export'
 
 const LayoutRoute = LayoutRouteImport.update({
   id: '/_layout',
@@ -53,14 +65,75 @@ const LayoutAdminRoute = LayoutAdminRouteImport.update({
   path: '/admin',
   getParentRoute: () => LayoutRoute,
 } as any)
+const LayoutBacktestRoute = LayoutBacktestRouteImport.update({
+  id: '/backtest',
+  path: '/backtest',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutGoogleSheetTokensRoute = LayoutGoogleSheetTokensRouteImport.update({
+  id: '/google-sheet-tokens',
+  path: '/google-sheet-tokens',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutGoogleSheetsRoute = LayoutGoogleSheetsRouteImport.update({
+  id: '/google-sheets',
+  path: '/google-sheets',
+  getParentRoute: () => LayoutRoute,
+} as any)
 const LayoutItemsRoute = LayoutItemsRouteImport.update({
   id: '/items',
   path: '/items',
   getParentRoute: () => LayoutRoute,
 } as any)
+const LayoutModelSummaryRoute = LayoutModelSummaryRouteImport.update({
+  id: '/model-summary',
+  path: '/model-summary',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutPerformanceAnalysisRoute =
+  LayoutPerformanceAnalysisRouteImport.update({
+    id: '/performance-analysis',
+    path: '/performance-analysis',
+    getParentRoute: () => LayoutRoute,
+  } as any)
+const LayoutResultsRoute = LayoutResultsRouteImport.update({
+  id: '/results',
+  path: '/results',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutScheduledTasksRoute = LayoutScheduledTasksRouteImport.update({
+  id: '/scheduled-tasks',
+  path: '/scheduled-tasks',
+  getParentRoute: () => LayoutRoute,
+} as any)
 const LayoutSettingsRoute = LayoutSettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutSystemRoute = LayoutSystemRouteImport.update({
+  id: '/system',
+  path: '/system',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutTasksIndexRoute = LayoutTasksIndexRouteImport.update({
+  id: '/tasks/',
+  path: '/tasks/',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutTasksTaskIdRoute = LayoutTasksTaskIdRouteImport.update({
+  id: '/tasks/$taskId',
+  path: '/tasks/$taskId',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutTasksCreateRoute = LayoutTasksCreateRouteImport.update({
+  id: '/tasks/create',
+  path: '/tasks/create',
+  getParentRoute: () => LayoutRoute,
+} as any)
+const LayoutTasksExportRoute = LayoutTasksExportRouteImport.update({
+  id: '/tasks/export',
+  path: '/tasks/export',
   getParentRoute: () => LayoutRoute,
 } as any)
 
@@ -71,8 +144,20 @@ export interface FileRoutesByFullPath {
   '/reset-password': typeof ResetPasswordRoute
   '/signup': typeof SignupRoute
   '/admin': typeof LayoutAdminRoute
+  '/backtest': typeof LayoutBacktestRoute
+  '/google-sheet-tokens': typeof LayoutGoogleSheetTokensRoute
+  '/google-sheets': typeof LayoutGoogleSheetsRoute
   '/items': typeof LayoutItemsRoute
+  '/model-summary': typeof LayoutModelSummaryRoute
+  '/performance-analysis': typeof LayoutPerformanceAnalysisRoute
+  '/results': typeof LayoutResultsRoute
+  '/scheduled-tasks': typeof LayoutScheduledTasksRoute
   '/settings': typeof LayoutSettingsRoute
+  '/system': typeof LayoutSystemRoute
+  '/tasks/$taskId': typeof LayoutTasksTaskIdRoute
+  '/tasks/create': typeof LayoutTasksCreateRoute
+  '/tasks/export': typeof LayoutTasksExportRoute
+  '/tasks/': typeof LayoutTasksIndexRoute
 }
 export interface FileRoutesByTo {
   '/login': typeof LoginRoute
@@ -80,9 +165,21 @@ export interface FileRoutesByTo {
   '/reset-password': typeof ResetPasswordRoute
   '/signup': typeof SignupRoute
   '/admin': typeof LayoutAdminRoute
+  '/backtest': typeof LayoutBacktestRoute
+  '/google-sheet-tokens': typeof LayoutGoogleSheetTokensRoute
+  '/google-sheets': typeof LayoutGoogleSheetsRoute
   '/items': typeof LayoutItemsRoute
+  '/model-summary': typeof LayoutModelSummaryRoute
+  '/performance-analysis': typeof LayoutPerformanceAnalysisRoute
+  '/results': typeof LayoutResultsRoute
+  '/scheduled-tasks': typeof LayoutScheduledTasksRoute
   '/settings': typeof LayoutSettingsRoute
+  '/system': typeof LayoutSystemRoute
   '/': typeof LayoutIndexRoute
+  '/tasks/$taskId': typeof LayoutTasksTaskIdRoute
+  '/tasks/create': typeof LayoutTasksCreateRoute
+  '/tasks/export': typeof LayoutTasksExportRoute
+  '/tasks': typeof LayoutTasksIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -92,9 +189,21 @@ export interface FileRoutesById {
   '/reset-password': typeof ResetPasswordRoute
   '/signup': typeof SignupRoute
   '/_layout/admin': typeof LayoutAdminRoute
+  '/_layout/backtest': typeof LayoutBacktestRoute
+  '/_layout/google-sheet-tokens': typeof LayoutGoogleSheetTokensRoute
+  '/_layout/google-sheets': typeof LayoutGoogleSheetsRoute
   '/_layout/items': typeof LayoutItemsRoute
+  '/_layout/model-summary': typeof LayoutModelSummaryRoute
+  '/_layout/performance-analysis': typeof LayoutPerformanceAnalysisRoute
+  '/_layout/results': typeof LayoutResultsRoute
+  '/_layout/scheduled-tasks': typeof LayoutScheduledTasksRoute
   '/_layout/settings': typeof LayoutSettingsRoute
+  '/_layout/system': typeof LayoutSystemRoute
   '/_layout/': typeof LayoutIndexRoute
+  '/_layout/tasks/$taskId': typeof LayoutTasksTaskIdRoute
+  '/_layout/tasks/create': typeof LayoutTasksCreateRoute
+  '/_layout/tasks/export': typeof LayoutTasksExportRoute
+  '/_layout/tasks/': typeof LayoutTasksIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -105,8 +214,20 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/signup'
     | '/admin'
+    | '/backtest'
+    | '/google-sheet-tokens'
+    | '/google-sheets'
     | '/items'
+    | '/model-summary'
+    | '/performance-analysis'
+    | '/results'
+    | '/scheduled-tasks'
     | '/settings'
+    | '/system'
+    | '/tasks/$taskId'
+    | '/tasks/create'
+    | '/tasks/export'
+    | '/tasks/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/login'
@@ -114,9 +235,21 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/signup'
     | '/admin'
+    | '/backtest'
+    | '/google-sheet-tokens'
+    | '/google-sheets'
     | '/items'
+    | '/model-summary'
+    | '/performance-analysis'
+    | '/results'
+    | '/scheduled-tasks'
     | '/settings'
+    | '/system'
     | '/'
+    | '/tasks/$taskId'
+    | '/tasks/create'
+    | '/tasks/export'
+    | '/tasks'
   id:
     | '__root__'
     | '/_layout'
@@ -125,9 +258,21 @@ export interface FileRouteTypes {
     | '/reset-password'
     | '/signup'
     | '/_layout/admin'
+    | '/_layout/backtest'
+    | '/_layout/google-sheet-tokens'
+    | '/_layout/google-sheets'
     | '/_layout/items'
+    | '/_layout/model-summary'
+    | '/_layout/performance-analysis'
+    | '/_layout/results'
+    | '/_layout/scheduled-tasks'
     | '/_layout/settings'
+    | '/_layout/system'
     | '/_layout/'
+    | '/_layout/tasks/$taskId'
+    | '/_layout/tasks/create'
+    | '/_layout/tasks/export'
+    | '/_layout/tasks/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -189,11 +334,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutAdminRouteImport
       parentRoute: typeof LayoutRoute
     }
+    '/_layout/backtest': {
+      id: '/_layout/backtest'
+      path: '/backtest'
+      fullPath: '/backtest'
+      preLoaderRoute: typeof LayoutBacktestRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/google-sheet-tokens': {
+      id: '/_layout/google-sheet-tokens'
+      path: '/google-sheet-tokens'
+      fullPath: '/google-sheet-tokens'
+      preLoaderRoute: typeof LayoutGoogleSheetTokensRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/google-sheets': {
+      id: '/_layout/google-sheets'
+      path: '/google-sheets'
+      fullPath: '/google-sheets'
+      preLoaderRoute: typeof LayoutGoogleSheetsRouteImport
+      parentRoute: typeof LayoutRoute
+    }
     '/_layout/items': {
       id: '/_layout/items'
       path: '/items'
       fullPath: '/items'
       preLoaderRoute: typeof LayoutItemsRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/model-summary': {
+      id: '/_layout/model-summary'
+      path: '/model-summary'
+      fullPath: '/model-summary'
+      preLoaderRoute: typeof LayoutModelSummaryRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/performance-analysis': {
+      id: '/_layout/performance-analysis'
+      path: '/performance-analysis'
+      fullPath: '/performance-analysis'
+      preLoaderRoute: typeof LayoutPerformanceAnalysisRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/results': {
+      id: '/_layout/results'
+      path: '/results'
+      fullPath: '/results'
+      preLoaderRoute: typeof LayoutResultsRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/scheduled-tasks': {
+      id: '/_layout/scheduled-tasks'
+      path: '/scheduled-tasks'
+      fullPath: '/scheduled-tasks'
+      preLoaderRoute: typeof LayoutScheduledTasksRouteImport
       parentRoute: typeof LayoutRoute
     }
     '/_layout/settings': {
@@ -203,21 +397,80 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LayoutSettingsRouteImport
       parentRoute: typeof LayoutRoute
     }
+    '/_layout/system': {
+      id: '/_layout/system'
+      path: '/system'
+      fullPath: '/system'
+      preLoaderRoute: typeof LayoutSystemRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/tasks/': {
+      id: '/_layout/tasks/'
+      path: '/tasks'
+      fullPath: '/tasks/'
+      preLoaderRoute: typeof LayoutTasksIndexRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/tasks/$taskId': {
+      id: '/_layout/tasks/$taskId'
+      path: '/tasks/$taskId'
+      fullPath: '/tasks/$taskId'
+      preLoaderRoute: typeof LayoutTasksTaskIdRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/tasks/create': {
+      id: '/_layout/tasks/create'
+      path: '/tasks/create'
+      fullPath: '/tasks/create'
+      preLoaderRoute: typeof LayoutTasksCreateRouteImport
+      parentRoute: typeof LayoutRoute
+    }
+    '/_layout/tasks/export': {
+      id: '/_layout/tasks/export'
+      path: '/tasks/export'
+      fullPath: '/tasks/export'
+      preLoaderRoute: typeof LayoutTasksExportRouteImport
+      parentRoute: typeof LayoutRoute
+    }
   }
 }
 
 interface LayoutRouteChildren {
   LayoutAdminRoute: typeof LayoutAdminRoute
+  LayoutBacktestRoute: typeof LayoutBacktestRoute
+  LayoutGoogleSheetTokensRoute: typeof LayoutGoogleSheetTokensRoute
+  LayoutGoogleSheetsRoute: typeof LayoutGoogleSheetsRoute
   LayoutItemsRoute: typeof LayoutItemsRoute
+  LayoutModelSummaryRoute: typeof LayoutModelSummaryRoute
+  LayoutPerformanceAnalysisRoute: typeof LayoutPerformanceAnalysisRoute
+  LayoutResultsRoute: typeof LayoutResultsRoute
+  LayoutScheduledTasksRoute: typeof LayoutScheduledTasksRoute
   LayoutSettingsRoute: typeof LayoutSettingsRoute
+  LayoutSystemRoute: typeof LayoutSystemRoute
   LayoutIndexRoute: typeof LayoutIndexRoute
+  LayoutTasksTaskIdRoute: typeof LayoutTasksTaskIdRoute
+  LayoutTasksCreateRoute: typeof LayoutTasksCreateRoute
+  LayoutTasksExportRoute: typeof LayoutTasksExportRoute
+  LayoutTasksIndexRoute: typeof LayoutTasksIndexRoute
 }
 
 const LayoutRouteChildren: LayoutRouteChildren = {
   LayoutAdminRoute: LayoutAdminRoute,
+  LayoutBacktestRoute: LayoutBacktestRoute,
+  LayoutGoogleSheetTokensRoute: LayoutGoogleSheetTokensRoute,
+  LayoutGoogleSheetsRoute: LayoutGoogleSheetsRoute,
   LayoutItemsRoute: LayoutItemsRoute,
+  LayoutModelSummaryRoute: LayoutModelSummaryRoute,
+  LayoutPerformanceAnalysisRoute: LayoutPerformanceAnalysisRoute,
+  LayoutResultsRoute: LayoutResultsRoute,
+  LayoutScheduledTasksRoute: LayoutScheduledTasksRoute,
   LayoutSettingsRoute: LayoutSettingsRoute,
+  LayoutSystemRoute: LayoutSystemRoute,
   LayoutIndexRoute: LayoutIndexRoute,
+  LayoutTasksTaskIdRoute: LayoutTasksTaskIdRoute,
+  LayoutTasksCreateRoute: LayoutTasksCreateRoute,
+  LayoutTasksExportRoute: LayoutTasksExportRoute,
+  LayoutTasksIndexRoute: LayoutTasksIndexRoute,
 }
 
 const LayoutRouteWithChildren =

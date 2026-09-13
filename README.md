@@ -79,6 +79,20 @@ General development docs: [development.md](./development.md).
 
 This includes the local FastAPI and Vite workflow, Docker Compose services, `.env` configuration, and more.
 
+## Google Sheet Task Domain (Migration)
+
+This repository hosts the migration of the former Flask project `google_sheet_task` onto this template (FastAPI + SQLModel + React 19). Domain docs live in [docs/migration/](./docs/migration/); the phase ledger with acceptance results is [docs/migration/07-phases.md](./docs/migration/07-phases.md).
+
+### Deployment differences vs. the upstream template
+
+- **Worker service (required for task execution).** `compose.yml` defines a single-instance `worker` service (image `backend:latest`, command `python -m app.worker`). The API processes are stateless: they only write rows; the worker claims pending tasks, heartbeats, evicts stale runs and runs cron cleanups. Deployments without the worker will keep tasks `pending` forever.
+- **Google OAuth token volume.** OAuth user tokens live in `GOOGLE_TOKEN_DIR` (default `./data`; mounted as the `app-data` volume at `/app/backend/data` in compose). Import tokens via the admin UI (`/google-sheet-tokens`) or the token pool API. Without a valid token, real Google Sheet runs cannot start.
+- **MySQL switch (5.7.8+ / 8.0+).** Default DB is PostgreSQL. To use MySQL, point `DATABASE_URL` at e.g.
+  `mysql+pymysql://user:pass@host:3306/app?charset=utf8mb4`
+  and create the database as `CREATE DATABASE app CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;`. The schema is dialect-neutral (single Alembic baseline: `alembic upgrade head` works on PostgreSQL 18 / MySQL 5.7 / MySQL 8.0). Code avoids window functions, CTEs and dialect-specific JSON path queries; hot query columns are physical columns.
+- **DingTalk stream bot (optional).** `docker compose --profile dingtalk up -d` starts the `ding-stream` service (`ding_stream_service/`, env `DING_STREAM_CLIENT_ID`/`DING_STREAM_CLIENT_SECRET`) for listing/restarting tasks from chat.
+- **No RBAC on business APIs.** The template login gates the SPA only; the migrated business routes (`/api/v1/tasks`, `/api/v1/task-results`, ...) intentionally carry no per-user permission checks (decision ① in docs/migration-plan.md).
+
 ## Release Notes
 
 Check the file [release-notes.md](./release-notes.md).

@@ -1,10 +1,19 @@
+from typing import Any
+
 from sqlmodel import Session, create_engine, select
 
 from app import crud
 from app.core.config import settings
 from app.models import User, UserCreate
 
-engine = create_engine(str(settings.DATABASE_URL), pool_pre_ping=True)
+_connect_args: dict[str, Any] = {}
+if settings.DATABASE_URL.startswith("mysql"):
+    # utf8mb4 is required for full Unicode support on MySQL 5.7.8+
+    _connect_args["charset"] = "utf8mb4"
+
+engine = create_engine(
+    str(settings.DATABASE_URL), connect_args=_connect_args, pool_pre_ping=True
+)
 
 
 # make sure all SQLModel models are imported (app.models) before initializing DB

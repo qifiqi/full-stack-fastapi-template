@@ -1,10 +1,11 @@
+import socket
 import warnings
 from typing import Literal, Self
+from urllib.parse import urlparse
 
 from pydantic import (
     EmailStr,
     HttpUrl,
-    PostgresDsn,
     computed_field,
     field_validator,
     model_validator,
@@ -28,16 +29,37 @@ class Settings(BaseSettings):
 
     PROJECT_NAME: str
     SENTRY_DSN: HttpUrl | None = None
-    DATABASE_URL: PostgresDsn
+    # Supports postgresql:// and mysql+pymysql:// (MySQL 5.7.8+)
+    DATABASE_URL: str
 
     @field_validator("DATABASE_URL", mode="before")
     @classmethod
-    def _use_psycopg_driver(cls, value: str | PostgresDsn) -> str:
+    def _normalize_database_url(cls, value: str) -> str:
         database_url = str(value)
         for scheme in ("postgres://", "postgresql://"):
             if database_url.startswith(scheme):
                 return database_url.replace(scheme, "postgresql+psycopg://", 1)
         return database_url
+
+    # -- google_sheet_task migration settings --
+    google_token_dir: str = "./data"
+    stock_base_url: str = ""
+    task_max_workers: int = 8
+    task_concurrency_google_sheet: int = 4
+    task_concurrency_google_sheet_c4: int = 4
+    task_concurrency_google_sheet_c5: int = 4
+    task_concurrency_google_sheet_c7: int = 4
+    task_concurrency_backtest_training: int = 4
+    task_concurrency_backtest_multi_product: int = 4
+    execution_delay_min: int = 20
+    execution_delay_max: int = 30
+    scheduled_task_lock_timeout_hours: int = 6
+    worker_instance_id: str = socket.gethostname()
+    ding_talk_access_token: str = ""
+    ding_talk_secret: str = ""
+    ding_stream_client_id: str = ""
+    ding_stream_secret: str = ""
+    base_url: str = ""
 
     SMTP_TLS: bool = True
     SMTP_SSL: bool = False
@@ -79,8 +101,9 @@ class Settings(BaseSettings):
     @model_validator(mode="after")
     def _enforce_non_default_secrets(self) -> Self:
         self._check_default_secret("SECRET_KEY", self.SECRET_KEY)
-        for host in self.DATABASE_URL.hosts():
-            self._check_default_secret("DATABASE_URL password", host["password"])
+        self._check_default_secret(
+            "DATABASE_URL password", urlparse(self.DATABASE_URL).password
+        )
         self._check_default_secret(
             "FIRST_SUPERUSER_PASSWORD", self.FIRST_SUPERUSER_PASSWORD
         )

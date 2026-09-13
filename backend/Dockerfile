@@ -51,6 +51,9 @@ COPY ./backend/pyproject.toml ./backend/alembic.ini /app/backend/
 
 COPY ./backend/app /app/backend/app
 
+# Internal DY.Stock.Api client (generated, vendored as-is)
+COPY ./backend/stock_sdk /app/backend/stock_sdk
+
 COPY --from=frontend-build /app/backend/app/frontend /app/backend/app/frontend
 
 # Sync the project
