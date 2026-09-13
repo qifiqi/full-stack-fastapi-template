@@ -1,0 +1,6 @@
+C:\Users\fuqing\Desktop\full-stack-fastapi-template\backend\app\core\config.py:97: UserWarning: The value of SECRET_KEY is "changethis", for security, please change it, at least for deployments.
+  warnings.warn(message, stacklevel=1)
+C:\Users\fuqing\Desktop\full-stack-fastapi-template\backend\app\core\config.py:97: UserWarning: The value of DATABASE_URL password is "changethis", for security, please change it, at least for deployments.
+  warnings.warn(message, stacklevel=1)
+C:\Users\fuqing\Desktop\full-stack-fastapi-template\backend\app\core\config.py:97: UserWarning: The value of FIRST_SUPERUSER_PASSWORD is "changethis", for security, please change it, at least for deployments.
+  warnings.warn(message, stacklevel=1)
